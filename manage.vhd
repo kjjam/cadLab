@@ -87,7 +87,7 @@ begin
 
 	Inst_myVGA1 : VGA1
 	generic map(
-		h_sp =>128,
+		h_sp =>128,		--800x600
 		h_bp => 88,
 		h_va => 800,
 		h_fp => 40,
@@ -121,15 +121,15 @@ begin
 --/++++++++++++++++++++++++++++++++++++++++ VGA_2_instance ++++++++++++++++++++++++++++++++++/
 
 Inst_myVGA2 : VGA1
-	generic map(
-		h_sp =>128,
-		h_bp => 88,
-		h_va => 800,
-		h_fp => 40,
-		v_sp => 4,
-		v_bp => 23,
-		v_va => 600,
-		v_fp => 1,
+	generic map(				
+		h_sp =>136,			-- 1024x768
+		h_bp => 144,
+		h_va => 1024,
+		h_fp => 24,
+		v_sp => 6,
+		v_bp => 29,
+		v_va => 768,
+		v_fp => 3,
 		
 		posx1 => 0,
 		posx2 => 50,
