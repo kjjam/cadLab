@@ -1,0 +1,7 @@
+vhdl isim_temp "VSG.vhd"
+vhdl isim_temp "HSG.vhd"
+vhdl isim_temp "CG.vhd"
+vhdl isim_temp "VGA1.vhd"
+vhdl isim_temp "myDCM.vhd"
+vhdl isim_temp "manage.vhd"
+vhdl isim_temp "myTestBench.vhd"

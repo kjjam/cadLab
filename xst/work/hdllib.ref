@@ -1,0 +1,12 @@
+EN manage NULL D:/az_cad/Main-project/manage.vhd sub00/vhpl10 1560647607
+EN cg NULL D:/az_cad/Main-project/CG.vhd sub00/vhpl06 1560647601
+AR hsg behavioral D:/az_cad/Main-project/HSG.vhd sub00/vhpl03 1560647598
+AR mydcm behavioral D:/az_cad/Main-project/myDCM.vhd sub00/vhpl09 1560647604
+AR vsg behavioral D:/az_cad/Main-project/VSG.vhd sub00/vhpl05 1560647600
+EN mydcm NULL D:/az_cad/Main-project/myDCM.vhd sub00/vhpl08 1560647603
+AR cg behavioral D:/az_cad/Main-project/CG.vhd sub00/vhpl07 1560647602
+EN vga1 NULL D:/az_cad/Main-project/VGA1.vhd sub00/vhpl00 1560647605
+AR vga1 behavioral D:/az_cad/Main-project/VGA1.vhd sub00/vhpl01 1560647606
+EN vsg NULL D:/az_cad/Main-project/VSG.vhd sub00/vhpl04 1560647599
+AR manage behavioral D:/az_cad/Main-project/manage.vhd sub00/vhpl11 1560647608
+EN hsg NULL D:/az_cad/Main-project/HSG.vhd sub00/vhpl02 1560647597

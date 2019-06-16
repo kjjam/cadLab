@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\az_cad\Main-project\manage.ncd
+OUTFILE=D:\az_cad\Main-project\manage.bit
+FAMILY=Spartan3
+PART=xc3s400-4pq208
+WORKINGDIR=D:\az_cad\Main-project
+LICENSE=WebPack
+USER_INFO=__0_0_0

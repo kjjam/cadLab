@@ -1,0 +1,6 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "Dipswitch2[0]" LOC = P183;
+NET "Dipswitch2[1]" LOC = P182;
+NET "Dipswitch2<1>"  CLOCK_DEDICATED_ROUTE = FALSE;

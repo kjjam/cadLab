@@ -1,0 +1,42 @@
+Running: f:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/az_cad/Main-project/myTestBench_isim_beh.exe -prj D:/az_cad/Main-project/myTestBench_beh.prj work.myTestBench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/az_cad/Main-project/VSG.vhd" into library work
+Parsing VHDL file "D:/az_cad/Main-project/HSG.vhd" into library work
+Parsing VHDL file "D:/az_cad/Main-project/CG.vhd" into library work
+Parsing VHDL file "D:/az_cad/Main-project/VGA1.vhd" into library work
+Parsing VHDL file "D:/az_cad/Main-project/myDCM.vhd" into library work
+Parsing VHDL file "D:/az_cad/Main-project/manage.vhd" into library work
+Parsing VHDL file "D:/az_cad/Main-project/myTestBench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture bufg_v of entity BUFG [bufg_default]
+Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture dcm_clock_divide_by_2_v of entity dcm_clock_divide_by_2 [dcm_clock_divide_by_2_default]
+Compiling architecture dcm_maximum_period_check_v of entity dcm_maximum_period_check [\dcm_maximum_period_check("CLKIN...]
+Compiling architecture dcm_maximum_period_check_v of entity dcm_maximum_period_check [\dcm_maximum_period_check("PSCLK...]
+Compiling architecture dcm_clock_lost_v of entity dcm_clock_lost [dcm_clock_lost_default]
+Compiling architecture dcm_v of entity DCM [\DCM(2.0,4,9,false,25.0,"NONE","...]
+Compiling architecture behavioral of entity myDCM [mydcm_default]
+Compiling architecture behavioral of entity HSG [\HSG(128,88,800,40,4,23,600,1)\]
+Compiling architecture behavioral of entity VSG [\VSG(128,88,800,40,4,23,600,1)\]
+Compiling architecture behavioral of entity CG [cg_default]
+Compiling architecture behavioral of entity VGA1 [\VGA1(128,88,800,40,4,23,600,1)\]
+Compiling architecture behavioral of entity manage [manage_default]
+Compiling architecture behavior of entity mytestbench
+Time Resolution for simulation is 1ps.
+Waiting for 12 sub-compilation(s) to finish...
+Compiled 35 VHDL Units
+Built simulation executable D:/az_cad/Main-project/myTestBench_isim_beh.exe
+Fuse Memory Usage: 59872 KB
+Fuse CPU Usage: 2968 ms

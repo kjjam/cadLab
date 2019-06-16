@@ -1,0 +1,5 @@
+set -tmpdir "D:/az_cad/Main-project/xst/projnav.tmp"
+set -xsthdpdir "D:/az_cad/Main-project/xst"
+elaborate
+-ifn VGA1.prj
+-ifmt mixed

@@ -1,0 +1,6 @@
+vhdl work "VSG.vhd"
+vhdl work "HSG.vhd"
+vhdl work "CG.vhd"
+vhdl work "VGA1.vhd"
+vhdl work "myDCM.vhd"
+vhdl work "manage.vhd"

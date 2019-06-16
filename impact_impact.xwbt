@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\az_cad\Main-project\impact.xsl
+OUTFILE=D:\az_cad\Main-project\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=D:\az_cad\Main-project
+LICENSE=iMPACT
+USER_INFO=iMPACT

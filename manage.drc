@@ -1,0 +1,20 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Jun 12 18:13:29 2019
+
+drc -z manage.ncd manage.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Inst_myVGA1/Inst_CG/o_color_and0000 is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Inst_myVGA2/Inst_CG/o_color_and0000 is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp Inst_myDCM/DCM_INST,
+   consult the device Interactive Data Sheet.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

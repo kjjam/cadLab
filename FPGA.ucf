@@ -1,0 +1,3 @@
+NET "i_clk40" LOC = P184;
+NET "rst" LOC = P72;
+NET "rst" PULLDOWN;
