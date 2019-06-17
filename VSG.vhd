@@ -29,10 +29,10 @@ begin
 
 HS_generator: process(HS)
 begin
-	if rising_edge(HS) then
+	if (rising_edge(HS)) then
 		YC <= cntr;
 		cntr<=cntr+1;
-		
+
 		if ( cntr = v_bp + v_va + v_fp + v_sp  ) then
 			cntr <= 0;
 		end if;
@@ -40,7 +40,6 @@ begin
 		if (cntr< v_sp ) then
 			VS <= '0';
 		else VS <= '1';
-		
 		end if;
 	end if;
 end process;

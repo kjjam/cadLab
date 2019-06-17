@@ -4,20 +4,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity VGA1 is
 	generic(
-		h_sp : integer :=128;
-		h_bp: integer := 88;
-		h_va: integer := 800;
-		h_fp: integer := 40;
-		v_sp : integer :=4;
-		v_bp: integer := 23;
-		v_va: integer := 600;
-		v_fp: integer := 1
+		h_sp : 	integer;
+		h_bp: 	integer;
+		h_va: 	integer;
+		h_fp: 	integer;
+		v_sp : 	integer;
+		v_bp: 	integer;
+		v_va: 	integer;
+		v_fp: 		integer
 	);
 	port(
-		i_clk40 : in STD_LOGIC;
-		HS : out STD_LOGIC;
-		VS : out STD_LOGIC;
-		o_color : out std_logic_vector(9 downto 0)
+		i_clk40 : 	in STD_LOGIC;
+		HS : 			out STD_LOGIC;
+		VS : 			out STD_LOGIC;
+		o_color : 	out std_logic_vector(9 downto 0)
 	);
 
 end VGA1;
