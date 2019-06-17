@@ -45,28 +45,28 @@ Clock i_clk40 to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-HS          |    7.892(R)|clk40             |   0.000|
-            |    9.793(R)|clk75             |   0.000|
-o_color<0>  |   15.447(R)|clk40             |   0.000|
-            |   17.371(R)|clk75             |   0.000|
-o_color<1>  |   16.143(R)|clk40             |   0.000|
-            |   18.067(R)|clk75             |   0.000|
-o_color<2>  |   15.756(R)|clk40             |   0.000|
-            |   17.680(R)|clk75             |   0.000|
-o_color<3>  |   16.144(R)|clk40             |   0.000|
-            |   18.068(R)|clk75             |   0.000|
-o_color<4>  |   16.149(R)|clk40             |   0.000|
-            |   18.073(R)|clk75             |   0.000|
-o_color<5>  |   14.890(R)|clk40             |   0.000|
-            |   16.814(R)|clk75             |   0.000|
-o_color<6>  |   14.559(R)|clk40             |   0.000|
-            |   16.483(R)|clk75             |   0.000|
-o_color<7>  |   15.594(R)|clk40             |   0.000|
-            |   17.518(R)|clk75             |   0.000|
-o_color<8>  |   15.934(R)|clk40             |   0.000|
-            |   17.858(R)|clk75             |   0.000|
-o_color<9>  |   14.558(R)|clk40             |   0.000|
-            |   16.482(R)|clk75             |   0.000|
+HS          |    8.956(R)|clk40             |   0.000|
+            |    8.342(R)|clk75             |   0.000|
+o_color<0>  |   18.099(R)|clk40             |   0.000|
+            |   16.895(R)|clk75             |   0.000|
+o_color<1>  |   19.119(R)|clk40             |   0.000|
+            |   17.915(R)|clk75             |   0.000|
+o_color<2>  |   19.476(R)|clk40             |   0.000|
+            |   18.272(R)|clk75             |   0.000|
+o_color<3>  |   19.806(R)|clk40             |   0.000|
+            |   18.602(R)|clk75             |   0.000|
+o_color<4>  |   19.476(R)|clk40             |   0.000|
+            |   18.272(R)|clk75             |   0.000|
+o_color<5>  |   17.988(R)|clk40             |   0.000|
+            |   16.784(R)|clk75             |   0.000|
+o_color<6>  |   18.337(R)|clk40             |   0.000|
+            |   17.133(R)|clk75             |   0.000|
+o_color<7>  |   18.337(R)|clk40             |   0.000|
+            |   17.133(R)|clk75             |   0.000|
+o_color<8>  |   18.338(R)|clk40             |   0.000|
+            |   17.134(R)|clk75             |   0.000|
+o_color<9>  |   18.338(R)|clk40             |   0.000|
+            |   17.134(R)|clk75             |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock i_clk40
@@ -74,48 +74,48 @@ Clock to Setup on destination clock i_clk40
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-i_clk40        |    6.428|         |         |         |
+i_clk40        |    5.810|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-Dipswitch2<0>  |HS             |    9.694|
-Dipswitch2<0>  |VS             |    9.716|
-Dipswitch2<0>  |o_color<0>     |   10.830|
-Dipswitch2<0>  |o_color<1>     |   11.526|
-Dipswitch2<0>  |o_color<2>     |   11.139|
-Dipswitch2<0>  |o_color<3>     |   11.527|
-Dipswitch2<0>  |o_color<4>     |   11.532|
-Dipswitch2<0>  |o_color<5>     |   10.273|
-Dipswitch2<0>  |o_color<6>     |    9.942|
-Dipswitch2<0>  |o_color<7>     |   10.977|
-Dipswitch2<0>  |o_color<8>     |   11.317|
-Dipswitch2<0>  |o_color<9>     |    9.941|
-Dipswitch2<1>  |HS             |    9.840|
-Dipswitch2<1>  |VS             |    9.947|
-Dipswitch2<1>  |o_color<0>     |   11.091|
-Dipswitch2<1>  |o_color<1>     |   11.787|
-Dipswitch2<1>  |o_color<2>     |   11.400|
-Dipswitch2<1>  |o_color<3>     |   11.788|
-Dipswitch2<1>  |o_color<4>     |   11.793|
-Dipswitch2<1>  |o_color<5>     |   10.534|
-Dipswitch2<1>  |o_color<6>     |   10.203|
-Dipswitch2<1>  |o_color<7>     |   11.238|
-Dipswitch2<1>  |o_color<8>     |   11.578|
-Dipswitch2<1>  |o_color<9>     |   10.202|
+Dipswitch2<0>  |HS             |   10.069|
+Dipswitch2<0>  |VS             |   10.051|
+Dipswitch2<0>  |o_color<0>     |   12.013|
+Dipswitch2<0>  |o_color<1>     |   13.033|
+Dipswitch2<0>  |o_color<2>     |   13.390|
+Dipswitch2<0>  |o_color<3>     |   13.720|
+Dipswitch2<0>  |o_color<4>     |   13.390|
+Dipswitch2<0>  |o_color<5>     |   11.902|
+Dipswitch2<0>  |o_color<6>     |   12.251|
+Dipswitch2<0>  |o_color<7>     |   12.251|
+Dipswitch2<0>  |o_color<8>     |   12.252|
+Dipswitch2<0>  |o_color<9>     |   12.252|
+Dipswitch2<1>  |HS             |    9.554|
+Dipswitch2<1>  |VS             |    9.615|
+Dipswitch2<1>  |o_color<0>     |   12.090|
+Dipswitch2<1>  |o_color<1>     |   13.110|
+Dipswitch2<1>  |o_color<2>     |   13.467|
+Dipswitch2<1>  |o_color<3>     |   13.797|
+Dipswitch2<1>  |o_color<4>     |   13.467|
+Dipswitch2<1>  |o_color<5>     |   11.979|
+Dipswitch2<1>  |o_color<6>     |   12.328|
+Dipswitch2<1>  |o_color<7>     |   12.328|
+Dipswitch2<1>  |o_color<8>     |   12.329|
+Dipswitch2<1>  |o_color<9>     |   12.329|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon Jun 17 14:58:20 2019 
+Analysis completed Mon Jun 17 15:46:57 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 163 MB
+Peak Memory Usage: 180 MB
 
 
 

@@ -9,36 +9,36 @@ Target Device  : xc3s400
 Target Package : pq208
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Mon Jun 17 14:57:44 2019
+Mapped Date    : Mon Jun 17 15:46:05 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           260 out of   7,168    3%
-  Number of 4 input LUTs:               295 out of   7,168    4%
+  Number of Slice Flip Flops:           520 out of   7,168    7%
+  Number of 4 input LUTs:               806 out of   7,168   11%
 Logic Distribution:
-  Number of occupied Slices:            301 out of   3,584    8%
-    Number of Slices containing only related logic:     301 out of     301 100%
-    Number of Slices containing unrelated logic:          0 out of     301   0%
+  Number of occupied Slices:            565 out of   3,584   15%
+    Number of Slices containing only related logic:     565 out of     565 100%
+    Number of Slices containing unrelated logic:          0 out of     565   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         445 out of   7,168    6%
-    Number used as logic:               295
-    Number used as a route-thru:        150
+  Total Number of 4 input LUTs:         944 out of   7,168   13%
+    Number used as logic:               806
+    Number used as a route-thru:        138
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 16 out of     141   11%
-  Number of BUFGMUXs:                     4 out of       8   50%
+  Number of BUFGMUXs:                     6 out of       8   75%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                3.12
+Average Fanout of Non-Clock Nets:                2.79
 
-Peak Memory Usage:  281 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  297 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 
