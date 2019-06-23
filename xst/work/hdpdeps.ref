@@ -1,30 +1,30 @@
 V3 27
-FL D:/az_cad/Main-project/CG.vhd 2019/06/17.15:47:56 P.20131013
-EN work/CG 1560770288 FL D:/az_cad/Main-project/CG.vhd PB ieee/std_logic_1164 1381692176
-AR work/CG/Behavioral 1560770289 \
-      FL D:/az_cad/Main-project/CG.vhd EN work/CG 1560770288
+FL D:/az_cad/Main-project/CG.vhd 2019/06/23.21:54:18 P.20131013
+EN work/CG 1561310671 FL D:/az_cad/Main-project/CG.vhd PB ieee/std_logic_1164 1381692176
+AR work/CG/Behavioral 1561310672 \
+      FL D:/az_cad/Main-project/CG.vhd EN work/CG 1561310671
 FL D:/az_cad/Main-project/HSG.vhd 2019/06/10.15:42:41 P.20131013
-EN work/HSG 1560770284 FL D:/az_cad/Main-project/HSG.vhd PB ieee/std_logic_1164 1381692176
-AR work/HSG/Behavioral 1560770285 \
-      FL D:/az_cad/Main-project/HSG.vhd EN work/HSG 1560770284
-FL D:/az_cad/Main-project/manage.vhd 2019/06/16.21:41:41 P.20131013
-EN work/manage 1560770294 FL D:/az_cad/Main-project/manage.vhd \
+EN work/HSG 1561310667 FL D:/az_cad/Main-project/HSG.vhd PB ieee/std_logic_1164 1381692176
+AR work/HSG/Behavioral 1561310668 \
+      FL D:/az_cad/Main-project/HSG.vhd EN work/HSG 1561310667
+FL D:/az_cad/Main-project/manage.vhd 2019/06/23.20:51:40 P.20131013
+EN work/manage 1561310677 FL D:/az_cad/Main-project/manage.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/manage/Behavioral 1560770295 \
-      FL D:/az_cad/Main-project/manage.vhd EN work/manage 1560770294 CP myDCM \
+AR work/manage/Behavioral 1561310678 \
+      FL D:/az_cad/Main-project/manage.vhd EN work/manage 1561310677 CP myDCM \
       CP VGA1
 FL D:/az_cad/Main-project/myDCM.vhd 2019/05/29.10:46:39 P.20131013
-EN work/myDCM 1560770290 FL D:/az_cad/Main-project/myDCM.vhd \
+EN work/myDCM 1561310673 FL D:/az_cad/Main-project/myDCM.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/myDCM/BEHAVIORAL 1560770291 \
-      FL D:/az_cad/Main-project/myDCM.vhd EN work/myDCM 1560770290 CP BUFG CP IBUFG \
+AR work/myDCM/BEHAVIORAL 1561310674 \
+      FL D:/az_cad/Main-project/myDCM.vhd EN work/myDCM 1561310673 CP BUFG CP IBUFG \
       CP DCM
-FL D:/az_cad/Main-project/VGA1.vhd 2019/06/16.22:24:26 P.20131013
-EN work/VGA1 1560770292 FL D:/az_cad/Main-project/VGA1.vhd PB ieee/std_logic_1164 1381692176
-AR work/VGA1/Behavioral 1560770293 \
-      FL D:/az_cad/Main-project/VGA1.vhd EN work/VGA1 1560770292 CP HSG CP VSG CP CG
+FL D:/az_cad/Main-project/VGA1.vhd 2019/06/23.20:51:21 P.20131013
+EN work/VGA1 1561310675 FL D:/az_cad/Main-project/VGA1.vhd PB ieee/std_logic_1164 1381692176
+AR work/VGA1/Behavioral 1561310676 \
+      FL D:/az_cad/Main-project/VGA1.vhd EN work/VGA1 1561310675 CP HSG CP VSG CP CG
 FL D:/az_cad/Main-project/VSG.vhd 2019/06/17.14:39:18 P.20131013
-EN work/VSG 1560770286 FL D:/az_cad/Main-project/VSG.vhd PB ieee/std_logic_1164 1381692176
-AR work/VSG/Behavioral 1560770287 \
-      FL D:/az_cad/Main-project/VSG.vhd EN work/VSG 1560770286
+EN work/VSG 1561310669 FL D:/az_cad/Main-project/VSG.vhd PB ieee/std_logic_1164 1381692176
+AR work/VSG/Behavioral 1561310670 \
+      FL D:/az_cad/Main-project/VSG.vhd EN work/VSG 1561310669

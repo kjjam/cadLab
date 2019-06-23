@@ -1,5 +1,5 @@
-#NET "GCLK" LOC = P184;
-NET "SW1" LOC = P190;
-NET "SW2" LOC = P189;
-#NET "SW3" LOC = P187;
-#NET "SW4" LOC = P185;
+NET "PushButton4[0]" LOC = P190;
+NET "PushButton4[1]" LOC = P189;
+NET "PushButton4[2]" LOC = P187;
+NET "PushButton4[3]" LOC = P185;
+ NET "PushButton4<0>" CLOCK_DEDICATED_ROUTE = FALSE; 

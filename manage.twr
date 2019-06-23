@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 f:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
 -n 3 -fastpaths -xml manage.twx manage.ncd -o manage.twr manage.pcf -ucf
-FPGA.ucf -ucf DIPSwitch.ucf -ucf VGA.ucf
+FPGA.ucf -ucf DIPSwitch.ucf -ucf VGA.ucf -ucf BUTTON_SWITCH.ucf
 
 Design file:              manage.ncd
 Physical constraint file: manage.pcf
@@ -40,75 +40,100 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Clock PushButton4<0> to Pad
+------------+------------+-------------------+--------+
+            | clk (edge) |                   | Clock  |
+Destination |   to PAD   |Internal Clock(s)  | Phase  |
+------------+------------+-------------------+--------+
+o_color<0>  |   24.665(R)|PushButton4_0_BUFGP|   0.000|
+o_color<1>  |   25.728(R)|PushButton4_0_BUFGP|   0.000|
+o_color<2>  |   25.698(R)|PushButton4_0_BUFGP|   0.000|
+o_color<3>  |   25.695(R)|PushButton4_0_BUFGP|   0.000|
+o_color<4>  |   25.698(R)|PushButton4_0_BUFGP|   0.000|
+o_color<5>  |   24.033(R)|PushButton4_0_BUFGP|   0.000|
+o_color<6>  |   24.392(R)|PushButton4_0_BUFGP|   0.000|
+o_color<7>  |   24.402(R)|PushButton4_0_BUFGP|   0.000|
+o_color<8>  |   24.403(R)|PushButton4_0_BUFGP|   0.000|
+o_color<9>  |   24.742(R)|PushButton4_0_BUFGP|   0.000|
+------------+------------+-------------------+--------+
+
 Clock i_clk40 to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-HS          |    8.956(R)|clk40             |   0.000|
-            |    8.342(R)|clk75             |   0.000|
-o_color<0>  |   18.099(R)|clk40             |   0.000|
-            |   16.895(R)|clk75             |   0.000|
-o_color<1>  |   19.119(R)|clk40             |   0.000|
-            |   17.915(R)|clk75             |   0.000|
-o_color<2>  |   19.476(R)|clk40             |   0.000|
-            |   18.272(R)|clk75             |   0.000|
-o_color<3>  |   19.806(R)|clk40             |   0.000|
-            |   18.602(R)|clk75             |   0.000|
-o_color<4>  |   19.476(R)|clk40             |   0.000|
-            |   18.272(R)|clk75             |   0.000|
-o_color<5>  |   17.988(R)|clk40             |   0.000|
-            |   16.784(R)|clk75             |   0.000|
-o_color<6>  |   18.337(R)|clk40             |   0.000|
-            |   17.133(R)|clk75             |   0.000|
-o_color<7>  |   18.337(R)|clk40             |   0.000|
-            |   17.133(R)|clk75             |   0.000|
-o_color<8>  |   18.338(R)|clk40             |   0.000|
-            |   17.134(R)|clk75             |   0.000|
-o_color<9>  |   18.338(R)|clk40             |   0.000|
-            |   17.134(R)|clk75             |   0.000|
+HS          |    7.185(R)|clk40             |   0.000|
+            |    8.613(R)|clk75             |   0.000|
+o_color<0>  |   16.497(R)|clk40             |   0.000|
+            |   19.728(R)|clk75             |   0.000|
+o_color<1>  |   17.560(R)|clk40             |   0.000|
+            |   20.791(R)|clk75             |   0.000|
+o_color<2>  |   17.530(R)|clk40             |   0.000|
+            |   20.761(R)|clk75             |   0.000|
+o_color<3>  |   17.527(R)|clk40             |   0.000|
+            |   20.758(R)|clk75             |   0.000|
+o_color<4>  |   17.530(R)|clk40             |   0.000|
+            |   20.761(R)|clk75             |   0.000|
+o_color<5>  |   15.865(R)|clk40             |   0.000|
+            |   19.096(R)|clk75             |   0.000|
+o_color<6>  |   16.224(R)|clk40             |   0.000|
+            |   19.455(R)|clk75             |   0.000|
+o_color<7>  |   16.234(R)|clk40             |   0.000|
+            |   19.465(R)|clk75             |   0.000|
+o_color<8>  |   16.235(R)|clk40             |   0.000|
+            |   19.466(R)|clk75             |   0.000|
+o_color<9>  |   16.574(R)|clk40             |   0.000|
+            |   19.805(R)|clk75             |   0.000|
 ------------+------------+------------------+--------+
+
+Clock to Setup on destination clock PushButton4<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+PushButton4<0> |    5.036|         |         |         |
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock i_clk40
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-i_clk40        |    5.810|         |         |         |
+i_clk40        |    5.957|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-Dipswitch2<0>  |HS             |   10.069|
-Dipswitch2<0>  |VS             |   10.051|
-Dipswitch2<0>  |o_color<0>     |   12.013|
-Dipswitch2<0>  |o_color<1>     |   13.033|
-Dipswitch2<0>  |o_color<2>     |   13.390|
-Dipswitch2<0>  |o_color<3>     |   13.720|
-Dipswitch2<0>  |o_color<4>     |   13.390|
-Dipswitch2<0>  |o_color<5>     |   11.902|
-Dipswitch2<0>  |o_color<6>     |   12.251|
-Dipswitch2<0>  |o_color<7>     |   12.251|
-Dipswitch2<0>  |o_color<8>     |   12.252|
-Dipswitch2<0>  |o_color<9>     |   12.252|
-Dipswitch2<1>  |HS             |    9.554|
-Dipswitch2<1>  |VS             |    9.615|
-Dipswitch2<1>  |o_color<0>     |   12.090|
-Dipswitch2<1>  |o_color<1>     |   13.110|
-Dipswitch2<1>  |o_color<2>     |   13.467|
-Dipswitch2<1>  |o_color<3>     |   13.797|
-Dipswitch2<1>  |o_color<4>     |   13.467|
-Dipswitch2<1>  |o_color<5>     |   11.979|
-Dipswitch2<1>  |o_color<6>     |   12.328|
-Dipswitch2<1>  |o_color<7>     |   12.328|
-Dipswitch2<1>  |o_color<8>     |   12.329|
-Dipswitch2<1>  |o_color<9>     |   12.329|
+Dipswitch2<0>  |HS             |    9.127|
+Dipswitch2<0>  |VS             |    9.762|
+Dipswitch2<0>  |o_color<0>     |   10.681|
+Dipswitch2<0>  |o_color<1>     |   11.744|
+Dipswitch2<0>  |o_color<2>     |   11.714|
+Dipswitch2<0>  |o_color<3>     |   11.711|
+Dipswitch2<0>  |o_color<4>     |   11.714|
+Dipswitch2<0>  |o_color<5>     |   10.049|
+Dipswitch2<0>  |o_color<6>     |   10.408|
+Dipswitch2<0>  |o_color<7>     |   10.418|
+Dipswitch2<0>  |o_color<8>     |   10.419|
+Dipswitch2<0>  |o_color<9>     |   10.758|
+Dipswitch2<1>  |HS             |    9.503|
+Dipswitch2<1>  |VS             |   10.229|
+Dipswitch2<1>  |o_color<0>     |   10.909|
+Dipswitch2<1>  |o_color<1>     |   11.972|
+Dipswitch2<1>  |o_color<2>     |   11.942|
+Dipswitch2<1>  |o_color<3>     |   11.939|
+Dipswitch2<1>  |o_color<4>     |   11.942|
+Dipswitch2<1>  |o_color<5>     |   10.277|
+Dipswitch2<1>  |o_color<6>     |   10.636|
+Dipswitch2<1>  |o_color<7>     |   10.646|
+Dipswitch2<1>  |o_color<8>     |   10.647|
+Dipswitch2<1>  |o_color<9>     |   10.986|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon Jun 17 15:46:57 2019 
+Analysis completed Sun Jun 23 21:56:12 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:

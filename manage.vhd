@@ -24,25 +24,14 @@ component VGA1
 		v_sp: 		integer;
 		v_bp: 		integer;
 		v_va: 		integer;
-		v_fp: 			integer;
-		posx1: 		integer;
-		posx2: 		integer;
-		posx3: 		integer;
-		posy1: 		integer;
-		posy2: 		integer;
-		posy3: 		integer;
-		height1 : integer;
-		height2 : integer;
-		height3 : integer;
-		width1 : 	integer;
-		width2: 	integer;
-		width3 : 	integer
+		v_fp: 			integer
 	);
 	port(
 		i_clk40 : 	in STD_LOGIC;
 		HS : 			out STD_LOGIC;
 		VS:				out STD_LOGIC;
-		o_color : 	out STD_LOGIC_VECTOR(9 downto 0 )
+		o_color : 	out STD_LOGIC_VECTOR(9 downto 0 );
+		PushButton : in STD_LOGIC_VECTOR(3 downto 0)
 	);	
 	end component ;
 	
@@ -65,11 +54,12 @@ signal clk75 : STD_LOGIC;
 signal clk20 : STD_LOGIC;
 signal hs1 , vs1 , hs2 , vs2 : std_logic :='0' ;
 signal color1 ,color2 : std_logic_vector(9 downto 0 ); 
-
+signal s_PushButton : std_logic_vector(3 downto 0):="0000"; 
 begin
 --/++++++++++++++++++++++++++++++++++++++++ DCM_instance ++++++++++++++++++++++++++++++++++/
-
-	Inst_myDCM: myDCM 
+	s_PushButton <= PushButton4;
+	
+Inst_myDCM: myDCM 
 		PORT MAP(
 			CLKIN_IN 		=> 				i_clk40,
 			RST_IN 			=> 				rst,
@@ -82,7 +72,7 @@ begin
 
 --/++++++++++++++++++++++++++++++++++++++++ VGA_1_instance ++++++++++++++++++++++++++++++++++/
 
-	Inst_myVGA1 : VGA1
+Inst_myVGA1 : VGA1
 	generic map(
 		h_sp 			=>		128,		--800x600
 		h_bp 			=> 	88,
@@ -91,25 +81,14 @@ begin
 		v_sp 			=> 	4,
 		v_bp 			=> 	23,
 		v_va 			=> 	600,
-		v_fp 			=> 	1,
-		posx1 		=> 	0,
-		posx2 		=> 	50,
-		posx3		=> 	100,
-		posy1		=> 	0,
-		posy2		=> 	50,
-		posy3		=> 	100,
-		height1	=>		10,
-		height2 	=>		10,
-		height3 	=>		10,
-		width1	 	=>		10,
-		width2		=>		10,
-		width3 	=>		10
+		v_fp 			=> 	1
 	)
 	port map(
 		i_clk40 		=> 	clk40,
 		HS 				=> 	hs1,
 		VS				=> 	vs1,
-		o_color 	=> 	color1
+		o_color 	=> 	color1,
+		PushButton  => s_PushButton
 	);
 	
 --/++++++++++++++++++++++++++++++++++++++++ VGA_2_instance ++++++++++++++++++++++++++++++++++/
@@ -123,25 +102,15 @@ Inst_myVGA2 : VGA1
 		v_sp 			=> 	6,
 		v_bp			=> 	29,
 		v_va 			=> 	768,
-		v_fp 			=> 	3,
-		posx1 		=> 	0,
-		posx2 		=> 	50,
-		posx3		=> 	100,
-		posy1		=> 	0,
-		posy2		=> 	50,
-		posy3		=> 	100,
-		height1	=>		10,
-		height2 	=>		10,
-		height3 	=>		10,
-		width1 	=>		10,
-		width2		=>		10,
-		width3 	=>		10
+		v_fp 			=> 	3
 		)
 	port map(
 		i_clk40 		=> 	clk75,
 		HS				=> 	hs2,
 		VS				=> 	vs2,
-		o_color 	=>		color2
+		o_color 	=>		color2,
+		PushButton  => s_PushButton
+
 	);
 	
 --/++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Jun 17 15:46:09 2019
+// Written by: Map P.20131013 on Sun Jun 23 21:55:23 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -21,5 +21,13 @@ COMP "o_color<6>" LOCATE = SITE "P199" LEVEL 1;
 COMP "o_color<7>" LOCATE = SITE "P198" LEVEL 1;
 COMP "o_color<8>" LOCATE = SITE "P197" LEVEL 1;
 COMP "o_color<9>" LOCATE = SITE "P196" LEVEL 1;
+COMP "PushButton4<0>" LOCATE = SITE "P190" LEVEL 1;
+PIN PushButton4<0>_pin<0> = BEL "PushButton4<0>" PINNAME PAD;
+PIN "PushButton4<0>_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "PushButton4<1>" LOCATE = SITE "P189" LEVEL 1;
+COMP "PushButton4<2>" LOCATE = SITE "P187" LEVEL 1;
+COMP "PushButton4<3>" LOCATE = SITE "P185" LEVEL 1;
+NET "PushButton4_0_BUFGP/IBUFG" BEL "PushButton4_0_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
 SCHEMATIC END;
 

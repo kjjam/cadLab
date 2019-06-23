@@ -17,7 +17,9 @@ entity VGA1 is
 		i_clk40 : 	in STD_LOGIC;
 		HS : 			out STD_LOGIC;
 		VS : 			out STD_LOGIC;
-		o_color : 	out std_logic_vector(9 downto 0)
+		o_color : 	out std_logic_vector(9 downto 0);
+		PushButton  : in std_logic_vector(3 downto 0)
+
 	);
 
 end VGA1;
@@ -73,40 +75,14 @@ end component ;
 		v_sp : integer :=4;
 		v_bp: integer := 23;
 		v_va: integer := 600;
-		v_fp: integer := 1;
-		
-		posx1: integer := 0;
-		posx2: integer := 50;
-		posx3: integer := 100;
-		posy1: integer := 0;
-		posy2: integer := 50;
-		posy3: integer := 100;
-		
-		height1 : integer :=200;
-		height2 : integer :=10;
-		height3 : integer :=10;
-		
-		width1 : integer :=200;
-		width2: integer :=10;
-		width3 : integer :=10;
-		
-		
-		screenVisibleWidth : integer := 128 + 88;
-		screenVisibleHeight : integer := 4 + 23;
-		
-		speedx1: integer := 1;
-		speedx2: integer := 1;
-		speedx3: integer := 1;
-		
-		speedy1: integer := 1;
-		speedy2: integer := 1;
-		speedy3: integer := 1
+		v_fp: integer := 1
 	);
 	port(
 		XC : IN integer;
 		YC: IN integer;
 		o_color : out std_logic_vector(9 downto 0);
-		clk1per60 : in std_logic
+		clk1per60 : in std_logic;
+		PushButton1: in  std_logic_vector(3 downto 0)
 	);
 	end component;
 	
@@ -160,7 +136,6 @@ Inst_VSG: VSG
 
 Inst_CG : CG
 	generic map(
-	
 		h_sp  =>128,
 		h_bp => 88,
 		h_va => 800,
@@ -168,40 +143,14 @@ Inst_CG : CG
 		v_sp  =>4,
 		v_bp => 23,
 		v_va => 600,
-		v_fp => 1,
-		
-		posx1 => 0,
-		posx2 => 50,
-		posx3 => 100,
-		posy1 => 0,
-		posy2 => 50,
-		posy3 => 100,
-		
-		height1  =>100,
-		height2  =>10,
-		height3  =>10,
-		
-		width1  =>100,
-		width2 =>10,
-		width3  =>10,
-		
-		screenVisibleWidth => 128 + 88 ,
-		
-		speedx1 => 3,
-		speedx2 => 3,
-		speedx3 => 3,
-		
-		speedy1 => 3,
-		speedy2 => 3,
-		speedy3 => 3
-
+		v_fp => 1
 	)
-
 	port map(
 		XC => h2c,
 		YC => v2c,
 		o_color => o_color,
-		clk1per60 => vs1
+		clk1per60 => vs1,
+		PushButton1 => PushButton
 
 	);
 	
