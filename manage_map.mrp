@@ -9,36 +9,38 @@ Target Device  : xc3s400
 Target Package : pq208
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Sun Jun 23 21:55:18 2019
+Mapped Date    : Mon Jun 24 11:34:01 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           556 out of   7,168    7%
-  Number of 4 input LUTs:               918 out of   7,168   12%
+  Total Number Slice Registers:         652 out of   7,168    9%
+    Number used as Flip Flops:          524
+    Number used as Latches:             128
+  Number of 4 input LUTs:             1,835 out of   7,168   25%
 Logic Distribution:
-  Number of occupied Slices:            665 out of   3,584   18%
-    Number of Slices containing only related logic:     665 out of     665 100%
-    Number of Slices containing unrelated logic:          0 out of     665   0%
+  Number of occupied Slices:          1,165 out of   3,584   32%
+    Number of Slices containing only related logic:   1,165 out of   1,165 100%
+    Number of Slices containing unrelated logic:          0 out of   1,165   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,135 out of   7,168   15%
-    Number used as logic:               918
-    Number used as a route-thru:        217
+  Total Number of 4 input LUTs:       2,071 out of   7,168   28%
+    Number used as logic:             1,835
+    Number used as a route-thru:        236
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 20 out of     141   14%
-  Number of BUFGMUXs:                     7 out of       8   87%
+  Number of BUFGMUXs:                     6 out of       8   75%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                2.67
+Average Fanout of Non-Clock Nets:                2.78
 
 Peak Memory Usage:  297 MB
-Total REAL time to MAP completion:  6 secs 
-Total CPU time to MAP completion:   5 secs 
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   8 secs 
 
 NOTES:
 
@@ -82,12 +84,6 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network PushButton4<3>_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 2 more times for the following
-   (max. 5 shown):
-   PushButton4<2>_IBUF,
-   PushButton4<1>_IBUF
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
