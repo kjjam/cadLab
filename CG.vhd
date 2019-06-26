@@ -131,24 +131,21 @@ architecture Behavioral of CG is
 
 	process (clk1per60)  -- push button check
 		begin	
-		
-		
-		
 		cntr <= cntr + 1;
-		if (19 < cntr) then			-- creating 3htz freqency
+		if (cntr > 19) then			-- creating 3htz freqency
 			cntr <= 0 ;
 			--check pushing keys
-			if ( PushButton = "1000" )then
+			if(PushButton(0) = '0' and PushButton(1) = '1') then
 						left_start_y <= left_start_y +10;
 						a<=true;
 			end if;
-			if ( PushButton = "0100" )then
+			if(PushButton(0) = '1' and PushButton(1) = '0') then
 						left_start_y <= left_start_y -10;
 			end if;
-			if ( PushButton = "0010" )then
+			if(PushButton(2) = '0' and PushButton(3) = '1') then
 						right_start_y <= right_start_y +10;
 			end if;
-			if ( PushButton = "0001" )then
+			if(PushButton(2) = '1' and PushButton(3) = '0') then
 						right_start_y <= right_start_y -10;
 			end if;
 			

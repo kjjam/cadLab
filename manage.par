@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-6UTEVC8::  Mon Jun 24 12:36:47 2019
+DESKTOP-6UTEVC8::  Wed Jun 26 08:19:19 2019
 
 par -w -intstyle ise -ol high -t 1 manage_map.ncd manage.ncd manage.pcf 
 
@@ -29,7 +29,7 @@ Device Utilization Summary:
    Number of External IOBs                  20 out of 141    14%
       Number of LOCed IOBs                  20 out of 20    100%
 
-   Number of Slices                       1190 out of 3584   33%
+   Number of Slices                       1139 out of 3584   31%
       Number of SLICEMs                      0 out of 1792    0%
 
 
@@ -39,49 +39,49 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 4 secs 
-Finished initial Timing Analysis.  REAL time: 4 secs 
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 4 secs 
+Total REAL time at the beginning of Placer: 5 secs 
 Total CPU  time at the beginning of Placer: 4 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3175b7ef) REAL time: 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:2880cb82) REAL time: 7 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:3175b7ef) REAL time: 5 secs 
+Phase 2.7  Design Feasibility Check (Checksum:2880cb82) REAL time: 7 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3175b7ef) REAL time: 5 secs 
+Phase 3.31  Local Placement Optimization (Checksum:2880cb82) REAL time: 7 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:27989402) REAL time: 5 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:1cd7e45d) REAL time: 8 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:27989402) REAL time: 5 secs 
+Phase 5.36  Local Placement Optimization (Checksum:1cd7e45d) REAL time: 8 secs 
 
 Phase 6.8  Global Placement
-.........................................................................................................
+..............................................................................................................................
 ..
-..........................................................................................................
+............................................................................................................................
+....
 ...
-...
-Phase 6.8  Global Placement (Checksum:72e2b844) REAL time: 16 secs 
+Phase 6.8  Global Placement (Checksum:6ced3d8d) REAL time: 18 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:72e2b844) REAL time: 16 secs 
+Phase 7.5  Local Placement Optimization (Checksum:6ced3d8d) REAL time: 18 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:37d912fa) REAL time: 20 secs 
+Phase 8.18  Placement Optimization (Checksum:d1823ee1) REAL time: 23 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:37d912fa) REAL time: 20 secs 
+Phase 9.5  Local Placement Optimization (Checksum:d1823ee1) REAL time: 23 secs 
 
-Total REAL time to Placer completion: 20 secs 
-Total CPU  time to Placer completion: 20 secs 
+Total REAL time to Placer completion: 23 secs 
+Total CPU  time to Placer completion: 21 secs 
 Writing design to file manage.ncd
 
 
@@ -89,32 +89,32 @@ Writing design to file manage.ncd
 Starting Router
 
 
-Phase  1  : 6682 unrouted;      REAL time: 21 secs 
+Phase  1  : 6482 unrouted;      REAL time: 25 secs 
 
-Phase  2  : 6234 unrouted;      REAL time: 22 secs 
+Phase  2  : 6046 unrouted;      REAL time: 25 secs 
 
-Phase  3  : 2466 unrouted;      REAL time: 23 secs 
+Phase  3  : 2407 unrouted;      REAL time: 27 secs 
 
-Phase  4  : 2537 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
+Phase  4  : 2455 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 35 secs 
 
 Updating file: manage.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 33 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 38 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 55 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 1 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 56 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 1 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 57 secs 
-WARNING:Route:455 - CLK Net:Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9> may have excessive skew because 
-      32 CLK pins and 61 NON_CLK pins failed to route using a CLK template.
-WARNING:Route:455 - CLK Net:Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9> may have excessive skew because 
-      32 CLK pins and 61 NON_CLK pins failed to route using a CLK template.
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 2 secs 
+WARNING:Route:455 - CLK Net:Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_gt0000_cy<9> may have excessive skew because 
+      32 CLK pins and 60 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_gt0000_cy<9> may have excessive skew because 
+      32 CLK pins and 60 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 57 secs 
-Total CPU time to Router completion: 57 secs 
+Total REAL time to Router completion: 1 mins 2 secs 
+Total CPU time to Router completion: 59 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -136,28 +136,25 @@ Generating Clock Report
 |                 /VS |      BUFGMUX0| No   |  108 |  0.020     |  1.034      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_myVGA1/Inst_VSG |              |      |      |            |             |
-|                 /VS |      BUFGMUX2| No   |  108 |  0.020     |  1.034      |
+|                 /VS |      BUFGMUX2| No   |  108 |  0.021     |  1.035      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_myVGA1/Inst_HSG |              |      |      |            |             |
-|                 /HS |      BUFGMUX3| No   |   33 |  0.001     |  1.034      |
+|                 /HS |      BUFGMUX3| No   |   33 |  0.020     |  1.034      |
 +---------------------+--------------+------+------+------------+-------------+
-|               clk40 |      BUFGMUX7| No   |   34 |  0.019     |  1.033      |
+|               clk40 |      BUFGMUX7| No   |   34 |  0.001     |  1.015      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_myVGA2/Inst_HSG |              |      |      |            |             |
 |                 /HS |      BUFGMUX5| No   |   33 |  0.001     |  1.015      |
 +---------------------+--------------+------+------+------------+-------------+
-|               clk75 |      BUFGMUX4| No   |   33 |  0.001     |  1.034      |
+|               clk75 |      BUFGMUX4| No   |   33 |  0.020     |  1.034      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_myVGA2/Inst_CG/ |              |      |      |            |             |
 |Mcompar_right_start_ |              |      |      |            |             |
-|  y_cmp_lt0000_cy<9> |         Local|      |   93 |  2.436     |  8.458      |
+|  y_cmp_gt0000_cy<9> |         Local|      |   92 |  2.541     |  5.126      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_myVGA1/Inst_CG/ |              |      |      |            |             |
 |Mcompar_right_start_ |              |      |      |            |             |
-|  y_cmp_lt0000_cy<9> |         Local|      |   93 |  2.753     |  7.228      |
-+---------------------+--------------+------+------+------------+-------------+
-|Inst_myVGA1/Inst_CG/ |              |      |      |            |             |
-|      a_0_cmp_eq0000 |         Local|      |    2 |  0.098     |  1.931      |
+|  y_cmp_gt0000_cy<9> |         Local|      |   92 |  2.451     |  5.664      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -177,31 +174,31 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     5.917ns|     N/A|           0
-  t_myVGA2/Inst_CG/Mcompar_right_start_y_cm | HOLD        |     1.375ns|            |       0|           0
-  p_lt0000_cy<9>                            |             |            |            |        |            
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     6.018ns|     N/A|           0
+  t_myVGA2/Inst_CG/Mcompar_right_start_y_cm | HOLD        |     1.389ns|            |       0|           0
+  p_gt0000_cy<9>                            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     5.967ns|     N/A|           0
-  t_myVGA1/Inst_CG/Mcompar_right_start_y_cm | HOLD        |     1.368ns|            |       0|           0
-  p_lt0000_cy<9>                            |             |            |            |        |            
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     5.866ns|     N/A|           0
+  t_myVGA1/Inst_CG/Mcompar_right_start_y_cm | HOLD        |     1.358ns|            |       0|           0
+  p_gt0000_cy<9>                            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|    10.903ns|     N/A|           0
-  t_myVGA2/Inst_VSG/VS                      | HOLD        |     0.912ns|            |       0|           0
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|    10.093ns|     N/A|           0
+  t_myVGA2/Inst_VSG/VS                      | HOLD        |     0.894ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|    10.059ns|     N/A|           0
-  t_myVGA1/Inst_VSG/VS                      | HOLD        |     0.891ns|            |       0|           0
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|    10.110ns|     N/A|           0
+  t_myVGA1/Inst_VSG/VS                      | HOLD        |     0.909ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     6.742ns|     N/A|           0
-  t_myVGA1/Inst_HSG/HS                      | HOLD        |     0.861ns|            |       0|           0
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     6.300ns|     N/A|           0
+  t_myVGA1/Inst_HSG/HS                      | HOLD        |     0.799ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     6.103ns|     N/A|           0
-  40                                        | HOLD        |     0.824ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.734ns|     N/A|           0
+  40                                        | HOLD        |     0.840ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     6.513ns|     N/A|           0
-  t_myVGA2/Inst_HSG/HS                      | HOLD        |     0.825ns|            |       0|           0
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     6.620ns|     N/A|           0
+  t_myVGA2/Inst_HSG/HS                      | HOLD        |     0.839ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     6.031ns|     N/A|           0
-  75                                        | HOLD        |     0.822ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     6.180ns|     N/A|           0
+  75                                        | HOLD        |     0.823ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -217,8 +214,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 59 secs 
-Total CPU time to PAR completion: 58 secs 
+Total REAL time to PAR completion: 1 mins 4 secs 
+Total CPU time to PAR completion: 1 mins 
 
 Peak Memory Usage:  304 MB
 

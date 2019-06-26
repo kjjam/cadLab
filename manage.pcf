@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Jun 24 12:36:40 2019
+// Written by: Map P.20131013 on Wed Jun 26 08:19:11 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -12,8 +12,6 @@ COMP "Dipswitch2<1>" LOCATE = SITE "P182" LEVEL 1;
 PIN Dipswitch2<1>_pin<0> = BEL "Dipswitch2<1>" PINNAME PAD;
 PIN "Dipswitch2<1>_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "PushButton<0>" LOCATE = SITE "P190" LEVEL 1;
-PIN PushButton<0>_pin<0> = BEL "PushButton<0>" PINNAME PAD;
-PIN "PushButton<0>_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "PushButton<1>" LOCATE = SITE "P189" LEVEL 1;
 COMP "PushButton<2>" LOCATE = SITE "P187" LEVEL 1;
 COMP "PushButton<3>" LOCATE = SITE "P185" LEVEL 1;

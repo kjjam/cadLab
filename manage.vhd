@@ -54,6 +54,8 @@ signal clk75 : STD_LOGIC;
 signal clk20 : STD_LOGIC;
 signal hs1 , vs1 , hs2 , vs2 : std_logic :='0' ;
 signal color1 ,color2 : std_logic_vector(9 downto 0 ); 
+signal button_sig : std_logic_vector (3 downto 0);
+
 begin
 --/++++++++++++++++++++++++++++++++++++++++ DCM_instance ++++++++++++++++++++++++++++++++++/
 	
@@ -69,7 +71,7 @@ Inst_myDCM: myDCM
 		);
 
 --/++++++++++++++++++++++++++++++++++++++++ VGA_1_instance ++++++++++++++++++++++++++++++++++/
-
+button_sig<=PushButton;
 Inst_myVGA1 : VGA1
 	generic map(
 		h_sp 			=>		128,		--800x600
@@ -86,7 +88,7 @@ Inst_myVGA1 : VGA1
 		HS 				=> 	hs1,
 		VS				=> 	vs1,
 		o_color 	=> 	color1,
-		PushButton  => PushButton
+		PushButton  => button_sig
 	);
 	
 --/++++++++++++++++++++++++++++++++++++++++ VGA_2_instance ++++++++++++++++++++++++++++++++++/
@@ -107,7 +109,7 @@ Inst_myVGA2 : VGA1
 		HS				=> 	hs2,
 		VS				=> 	vs2,
 		o_color 	=>		color2,
-		PushButton  => PushButton
+		PushButton  => button_sig
 
 	);
 	

@@ -91,6 +91,7 @@ signal h2c : integer :=0;
 signal v2c : integer :=0;
 signal hs1 : STD_LOGIC :='0' ;
 signal vs1 : STD_LOGIC :='0' ;
+signal button_sig : std_logic_vector(3 downto 0);
 
 begin
 
@@ -133,7 +134,7 @@ Inst_VSG: VSG
 	);
 
 --/++++++++++++++++++++++++++++++++CG_Instance______+++++++++++++++++++++++++++++++++/
-
+button_sig<=PushButton;
 Inst_CG : CG
 	generic map(
 		h_sp  =>128,
@@ -150,8 +151,7 @@ Inst_CG : CG
 		YC => v2c,
 		o_color => o_color,
 		clk1per60 => vs1,
-		PushButton => PushButton
-
+		PushButton => button_sig
 	);
 	
 --/++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
