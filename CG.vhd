@@ -18,7 +18,7 @@ entity CG is
 		YC: IN integer;
 		o_color : out std_logic_vector(9 downto 0);
 		clk1per60 : in std_logic;
-		PushButton1 : in std_logic_vector(3 downto 0)
+		PushButton : in std_logic_vector(3 downto 0)
 	);
 
 end CG;
@@ -30,19 +30,21 @@ architecture Behavioral of CG is
 	signal mid_end_x:	 integer :=	h_sp + h_bp + 400 + 15;  	   	
 	signal mid_start_y:	 integer :=	v_sp + v_bp + 200;
 	signal mid_end_y:	 integer :=	v_sp + v_bp + 200 + 15;   		
-	signal right_start_x: integer :=	h_sp + h_bp + h_va - 25;
+	signal right_start_x: integer :=	h_sp + h_bp + h_va - 15;
 	signal right_end_x:  integer :=	h_sp + h_bp + h_va ;
 	signal right_start_y: integer :=	v_sp + v_bp + 100;
 	signal right_end_y:	 integer :=	v_sp + v_bp + 300;
 	signal left_start_x:    integer :=	h_sp + h_bp;
-	signal left_end_x:    integer :=	h_sp + h_bp + 25;
+	signal left_end_x:    integer :=	h_sp + h_bp + 15;
 	signal left_start_y:   integer :=	v_sp + v_bp + 100;
 	signal left_end_y:	 integer :=	v_sp + v_bp + 300;
 	signal toleracket:	 integer :=	300;
-	signal v_x	:integer :=	5;
-	signal v_y	:integer :=	5;
-	signal default_v	:integer :=	5;
+	signal v_x	:integer :=	2;
+	signal v_y	:integer :=	2;
+	signal default_v	:integer :=	2;
 	signal cntr 	:integer :=0;
+	signal max_v 	:integer :=32;
+	signal a :boolean :=false;
 	
 	begin
 	
@@ -55,6 +57,7 @@ architecture Behavioral of CG is
 					else
 					 o_color <= "0000000000" ;
 					end if;
+					
 		end process;
 -- -----------------------------------------------------
 
@@ -70,54 +73,57 @@ architecture Behavioral of CG is
 					
 					if ( (mid_end_x>right_start_x) and 
 							 (mid_start_y >right_start_y) and 
-								(mid_end_y < right_start_y +toleracket)  )  then 			--hit right item
+								(mid_end_y < right_start_y +toleracket)  )  then 			--hit right racket
 						v_x <= -default_v;
 					end if;
 					if( (mid_start_x<left_end_x) and 
 								(mid_start_y >left_start_y) and 
-									(mid_end_y < left_start_y +toleracket)) then 			--hit left item
+									(mid_end_y < left_start_y +toleracket)) then 			--hit left racket
 						v_x <= default_v;
 					end if;
 					
 					if(mid_start_y = v_sp+v_bp)then		-- hit top
 						v_y<= +default_v;
 					end if;
+					
 					if(mid_end_y = v_sp+v_bp+v_va)then	-- hit bottom
 						v_y<=-default_v;
 					end if;
---					if( ( mid_end_x > h_sp + h_bp + h_va) and
---						(mid_start_y > right_start_y+toleracket) and
---						(mid_end_y < v_sp+v_bp+v_va ) and 
---						(mid_start_y>v_sp+v_bp) and
---						(mid_end_y<right_start_y ) )then
 
-					if(mid_start_x<h_sp+h_bp)then
+					if(mid_start_x<h_sp+h_bp)then					-- right scores !
 							mid_start_x <= h_sp + h_bp + 400;
 							mid_end_x  <= h_sp + h_bp + 400 +15 ;
 							mid_start_y <= v_sp + v_bp + 200;
 							mid_end_y  <= v_sp + v_bp + 200 +15;
-							--left scores
+							
+							if ( (v_x>-max_v-1) )then
+								v_x<= v_x*2;
+								v_y <=v_y*2;
+							else
+									v_x <= 2;
+									v_y <= 2;
+									default_v <= 2;
+							end if;
+							
 					end if;
 					
---					if( ( mid_start_x < h_sp + h_bp) and
---						(mid_start_y > left_start_y+toleracket) and
---						(mid_end_y < v_sp+v_bp+v_va ) and 
---						(mid_start_y>v_sp+v_bp) and
---						(mid_end_y<left_start_y ) )then
-				if(mid_end_x > h_sp+h_bp+h_va)then
-							mid_start_x <= h_sp + h_bp + 400;
-							mid_end_x  <= h_sp + h_bp + 400 +15 ;
-							mid_start_y <= v_sp + v_bp + 200;
-							mid_end_y  <= v_sp + v_bp + 200 +15; 
+					if(mid_end_x > h_sp+h_bp+h_va) then			-- left scores !
+							mid_start_x <= h_sp + h_bp + 350;
+							mid_end_x  <= h_sp + h_bp + 350 +15 ;
+							mid_start_y <= v_sp + v_bp + 150;
+							mid_end_y  <= v_sp + v_bp + 150 +15; 
 							
-							--left scores
+							if ( (v_x< max_v+1))then
+								v_x<= v_x*2;
+								v_y <=v_y *2;
+							else
+									v_x <= 2;
+									v_y <= 2;
+									default_v <= 2;
+							end if;
+							
 					end if;
---					if(mid_start_x = h_sp + h_bp)then
---						v_x <= +default_v;
---					end if;
---					if(mid_end_x = h_sp + h_bp + h_va)then
---						v_x <= -default_v;
---					end if;
+
 	--/------------------------------------------------------------------------------------------------------------ <=
 		end if;
 	end process;
@@ -125,21 +131,25 @@ architecture Behavioral of CG is
 
 	process (clk1per60)  -- push button check
 		begin	
+		
+		
+		
 		cntr <= cntr + 1;
 		if (19 < cntr) then			-- creating 3htz freqency
 			cntr <= 0 ;
 			--check pushing keys
-			if ( PushButton1 = "1000" )then
-						left_start_y <= left_start_y +1;
+			if ( PushButton = "1000" )then
+						left_start_y <= left_start_y +10;
+						a<=true;
 			end if;
-			if ( PushButton1 = "0100" )then
-						left_start_y <= left_start_y -1;
+			if ( PushButton = "0100" )then
+						left_start_y <= left_start_y -10;
 			end if;
-			if ( PushButton1 = "0010" )then
-						right_start_y <= right_start_y +1;
+			if ( PushButton = "0010" )then
+						right_start_y <= right_start_y +10;
 			end if;
-			if ( PushButton1 = "0001" )then
-						right_start_y <= right_start_y -1;
+			if ( PushButton = "0001" )then
+						right_start_y <= right_start_y -10;
 			end if;
 			
 		end if;

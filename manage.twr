@@ -40,33 +40,101 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Clock PushButton<0> to Pad
+------------+------------+----------------------------------+--------+
+            | clk (edge) |                                  | Clock  |
+Destination |   to PAD   |Internal Clock(s)                 | Phase  |
+------------+------------+----------------------------------+--------+
+o_color<0>  |   20.109(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<1>  |   21.172(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<2>  |   21.532(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<3>  |   21.506(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<4>  |   21.532(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<5>  |   20.286(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<6>  |   20.303(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<7>  |   19.936(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<8>  |   20.276(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<9>  |   20.304(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+------------+------------+----------------------------------+--------+
+
+Clock PushButton<1> to Pad
+------------+------------+----------------------------------+--------+
+            | clk (edge) |                                  | Clock  |
+Destination |   to PAD   |Internal Clock(s)                 | Phase  |
+------------+------------+----------------------------------+--------+
+o_color<0>  |   20.793(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<1>  |   21.856(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<2>  |   22.216(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<3>  |   22.190(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<4>  |   22.216(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<5>  |   20.970(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<6>  |   20.987(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<7>  |   20.620(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<8>  |   20.960(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<9>  |   20.988(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+------------+------------+----------------------------------+--------+
+
+Clock PushButton<2> to Pad
+------------+------------+----------------------------------+--------+
+            | clk (edge) |                                  | Clock  |
+Destination |   to PAD   |Internal Clock(s)                 | Phase  |
+------------+------------+----------------------------------+--------+
+o_color<0>  |   20.306(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<1>  |   21.369(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<2>  |   21.729(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<3>  |   21.703(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<4>  |   21.729(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<5>  |   20.483(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<6>  |   20.500(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<7>  |   20.133(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<8>  |   20.473(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<9>  |   20.501(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+------------+------------+----------------------------------+--------+
+
+Clock PushButton<3> to Pad
+------------+------------+----------------------------------+--------+
+            | clk (edge) |                                  | Clock  |
+Destination |   to PAD   |Internal Clock(s)                 | Phase  |
+------------+------------+----------------------------------+--------+
+o_color<0>  |   20.005(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<1>  |   21.068(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<2>  |   21.428(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<3>  |   21.402(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<4>  |   21.428(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<5>  |   20.182(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<6>  |   20.199(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<7>  |   19.832(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<8>  |   20.172(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+o_color<9>  |   20.200(F)|Inst_myVGA1/Inst_CG/a_0_cmp_eq0000|   0.000|
+------------+------------+----------------------------------+--------+
+
 Clock i_clk40 to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-HS          |    8.503(R)|clk40             |   0.000|
-            |    7.815(R)|clk75             |   0.000|
-o_color<0>  |   16.885(R)|clk40             |   0.000|
-            |   17.352(R)|clk75             |   0.000|
-o_color<1>  |   18.283(R)|clk40             |   0.000|
-            |   18.750(R)|clk75             |   0.000|
-o_color<2>  |   18.638(R)|clk40             |   0.000|
-            |   19.105(R)|clk75             |   0.000|
-o_color<3>  |   17.905(R)|clk40             |   0.000|
-            |   18.372(R)|clk75             |   0.000|
-o_color<4>  |   18.638(R)|clk40             |   0.000|
-            |   19.105(R)|clk75             |   0.000|
-o_color<5>  |   16.930(R)|clk40             |   0.000|
-            |   17.397(R)|clk75             |   0.000|
-o_color<6>  |   17.958(R)|clk40             |   0.000|
-            |   18.425(R)|clk75             |   0.000|
-o_color<7>  |   16.929(R)|clk40             |   0.000|
-            |   17.396(R)|clk75             |   0.000|
-o_color<8>  |   16.906(R)|clk40             |   0.000|
-            |   17.373(R)|clk75             |   0.000|
-o_color<9>  |   18.299(R)|clk40             |   0.000|
-            |   18.766(R)|clk75             |   0.000|
+HS          |    8.780(R)|clk40             |   0.000|
+            |    9.236(R)|clk75             |   0.000|
+o_color<0>  |   19.179(R)|clk40             |   0.000|
+            |   19.672(R)|clk75             |   0.000|
+o_color<1>  |   20.242(R)|clk40             |   0.000|
+            |   20.735(R)|clk75             |   0.000|
+o_color<2>  |   20.602(R)|clk40             |   0.000|
+            |   21.095(R)|clk75             |   0.000|
+o_color<3>  |   20.576(R)|clk40             |   0.000|
+            |   21.069(R)|clk75             |   0.000|
+o_color<4>  |   20.602(R)|clk40             |   0.000|
+            |   21.095(R)|clk75             |   0.000|
+o_color<5>  |   19.356(R)|clk40             |   0.000|
+            |   19.849(R)|clk75             |   0.000|
+o_color<6>  |   19.373(R)|clk40             |   0.000|
+            |   19.866(R)|clk75             |   0.000|
+o_color<7>  |   19.006(R)|clk40             |   0.000|
+            |   19.499(R)|clk75             |   0.000|
+o_color<8>  |   19.346(R)|clk40             |   0.000|
+            |   19.839(R)|clk75             |   0.000|
+o_color<9>  |   19.374(R)|clk40             |   0.000|
+            |   19.867(R)|clk75             |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock i_clk40
@@ -74,41 +142,41 @@ Clock to Setup on destination clock i_clk40
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-i_clk40        |    5.936|         |         |         |
+i_clk40        |    6.103|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-Dipswitch2<0>  |HS             |    8.511|
-Dipswitch2<0>  |VS             |    9.098|
-Dipswitch2<0>  |o_color<0>     |   11.345|
-Dipswitch2<0>  |o_color<1>     |   12.743|
-Dipswitch2<0>  |o_color<2>     |   13.098|
-Dipswitch2<0>  |o_color<3>     |   12.365|
-Dipswitch2<0>  |o_color<4>     |   13.098|
-Dipswitch2<0>  |o_color<5>     |   11.390|
-Dipswitch2<0>  |o_color<6>     |   12.418|
-Dipswitch2<0>  |o_color<7>     |   11.389|
-Dipswitch2<0>  |o_color<8>     |   11.366|
-Dipswitch2<0>  |o_color<9>     |   12.759|
-Dipswitch2<1>  |HS             |    9.033|
-Dipswitch2<1>  |VS             |    9.696|
-Dipswitch2<1>  |o_color<0>     |   11.635|
-Dipswitch2<1>  |o_color<1>     |   13.033|
-Dipswitch2<1>  |o_color<2>     |   13.388|
-Dipswitch2<1>  |o_color<3>     |   12.655|
-Dipswitch2<1>  |o_color<4>     |   13.388|
-Dipswitch2<1>  |o_color<5>     |   11.680|
-Dipswitch2<1>  |o_color<6>     |   12.708|
-Dipswitch2<1>  |o_color<7>     |   11.679|
-Dipswitch2<1>  |o_color<8>     |   11.656|
-Dipswitch2<1>  |o_color<9>     |   13.049|
+Dipswitch2<0>  |HS             |   10.409|
+Dipswitch2<0>  |VS             |   10.151|
+Dipswitch2<0>  |o_color<0>     |   11.554|
+Dipswitch2<0>  |o_color<1>     |   12.617|
+Dipswitch2<0>  |o_color<2>     |   12.977|
+Dipswitch2<0>  |o_color<3>     |   12.951|
+Dipswitch2<0>  |o_color<4>     |   12.977|
+Dipswitch2<0>  |o_color<5>     |   11.731|
+Dipswitch2<0>  |o_color<6>     |   11.748|
+Dipswitch2<0>  |o_color<7>     |   11.381|
+Dipswitch2<0>  |o_color<8>     |   11.721|
+Dipswitch2<0>  |o_color<9>     |   11.749|
+Dipswitch2<1>  |HS             |    9.812|
+Dipswitch2<1>  |VS             |    9.633|
+Dipswitch2<1>  |o_color<0>     |   11.956|
+Dipswitch2<1>  |o_color<1>     |   13.019|
+Dipswitch2<1>  |o_color<2>     |   13.379|
+Dipswitch2<1>  |o_color<3>     |   13.353|
+Dipswitch2<1>  |o_color<4>     |   13.379|
+Dipswitch2<1>  |o_color<5>     |   12.133|
+Dipswitch2<1>  |o_color<6>     |   12.150|
+Dipswitch2<1>  |o_color<7>     |   11.783|
+Dipswitch2<1>  |o_color<8>     |   12.123|
+Dipswitch2<1>  |o_color<9>     |   12.151|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon Jun 24 11:35:22 2019 
+Analysis completed Mon Jun 24 12:37:57 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:

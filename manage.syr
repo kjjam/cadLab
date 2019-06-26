@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Reading design: manage.prj
 
@@ -114,9 +114,11 @@ Entity <cg> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/az_cad/Main-project/myDCM.vhd" in Library work.
 Architecture behavioral of Entity mydcm is up to date.
 Compiling vhdl file "D:/az_cad/Main-project/VGA1.vhd" in Library work.
-Architecture behavioral of Entity vga1 is up to date.
+Entity <vga1> compiled.
+Entity <vga1> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/az_cad/Main-project/manage.vhd" in Library work.
-Architecture behavioral of Entity manage is up to date.
+Entity <manage> compiled.
+Entity <manage> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -200,8 +202,8 @@ Analyzing hierarchy for entity <VSG> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <manage> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "D:/az_cad/Main-project/manage.vhd" line 62: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'myDCM'.
-WARNING:Xst:753 - "D:/az_cad/Main-project/manage.vhd" line 62: Unconnected output port 'LOCKED_OUT' of component 'myDCM'.
+WARNING:Xst:753 - "D:/az_cad/Main-project/manage.vhd" line 60: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'myDCM'.
+WARNING:Xst:753 - "D:/az_cad/Main-project/manage.vhd" line 60: Unconnected output port 'LOCKED_OUT' of component 'myDCM'.
 Entity <manage> analyzed. Unit <manage> generated.
 
 Analyzing Entity <myDCM> in library <work> (Architecture <behavioral>).
@@ -269,10 +271,11 @@ Analyzing generic Entity <CG> in library <work> (Architecture <behavioral>).
 	v_fp = 1
 	v_sp = 4
 	v_va = 600
-WARNING:Xst:819 - "D:/az_cad/Main-project/CG.vhd" line 49: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <mid_start_x>, <mid_end_x>, <mid_start_y>, <mid_end_y>, <left_start_x>, <left_end_x>, <left_start_y>, <toleracket>, <right_start_x>, <right_end_x>, <right_start_y>
-WARNING:Xst:819 - "D:/az_cad/Main-project/CG.vhd" line 126: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <PushButton1>
+WARNING:Xst:819 - "D:/az_cad/Main-project/CG.vhd" line 51: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <mid_start_x>, <mid_end_x>, <mid_start_y>, <mid_end_y>, <left_start_x>, <left_end_x>, <left_start_y>, <toleracket>, <right_start_x>, <right_end_x>, <right_start_y>, <a>
+WARNING:Xst:819 - "D:/az_cad/Main-project/CG.vhd" line 134: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <PushButton>
+INFO:Xst:2679 - Register <default_v> in unit <CG> has a constant value of 10 during circuit operation. The register is replaced by logic.
 Entity <CG> analyzed. Unit <CG> generated.
 
 Analyzing generic Entity <VGA1.2> in library <work> (Architecture <behavioral>).
@@ -344,59 +347,70 @@ Unit <VSG_1> synthesized.
 Synthesizing Unit <CG>.
     Related source file is "D:/az_cad/Main-project/CG.vhd".
 WARNING:Xst:653 - Signal <toleracket> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000100101100.
-WARNING:Xst:653 - Signal <right_start_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001111011111.
+WARNING:Xst:653 - Signal <right_start_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001111101001.
 WARNING:Xst:1780 - Signal <right_end_y> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <right_end_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000001111111000.
+WARNING:Xst:653 - Signal <max_v> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000001111000.
 WARNING:Xst:653 - Signal <left_start_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000011011000.
 WARNING:Xst:1780 - Signal <left_end_y> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <left_end_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000011110001.
-WARNING:Xst:653 - Signal <default_v> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000101.
+WARNING:Xst:653 - Signal <left_end_x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000011100111.
 WARNING:Xst:737 - Found 32-bit latch for signal <right_start_y>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 32-bit latch for signal <left_start_y>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit adder for signal <cntr$addsub0000> created at line 128.
-    Found 32-bit 4-to-1 multiplexer for signal <left_start_y$mux0002> created at line 135.
-    Found 32-bit addsub for signal <left_start_y$share0000> created at line 135.
+WARNING:Xst:737 - Found 1-bit latch for signal <a_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit adder for signal <cntr$addsub0000> created at line 139.
+    Found 32-bit 4-to-1 multiplexer for signal <left_start_y$mux0002> created at line 147.
+    Found 32-bit addsub for signal <left_start_y$share0000> created at line 147.
     Found 32-bit register for signal <mid_end_x>.
-    Found 32-bit adder for signal <mid_end_x$addsub0000> created at line 67.
+    Found 32-bit adder for signal <mid_end_x$addsub0000> created at line 72.
     Found 32-bit register for signal <mid_end_y>.
-    Found 32-bit adder for signal <mid_end_y$addsub0000> created at line 69.
+    Found 32-bit adder for signal <mid_end_y$addsub0000> created at line 74.
     Found 32-bit register for signal <mid_start_x>.
-    Found 32-bit adder for signal <mid_start_x$addsub0000> created at line 66.
-    Found 32-bit comparator greater for signal <mid_start_x$cmp_gt0001> created at line 107.
-    Found 32-bit comparator less for signal <mid_start_x$cmp_lt0000> created at line 94.
+    Found 32-bit adder for signal <mid_start_x$addsub0000> created at line 71.
+    Found 32-bit comparator greater for signal <mid_start_x$cmp_gt0001> created at line 112.
+    Found 32-bit comparator less for signal <mid_start_x$cmp_lt0000> created at line 95.
     Found 32-bit register for signal <mid_start_y>.
-    Found 32-bit adder for signal <mid_start_y$addsub0000> created at line 68.
-    Found 32-bit adder for signal <o_color$add0000> created at line 51.
-    Found 32-bit adder for signal <o_color$add0001> created at line 51.
-    Found 32-bit comparator greater for signal <o_color$cmp_gt0000> created at line 51.
-    Found 32-bit comparator greater for signal <o_color$cmp_gt0001> created at line 51.
-    Found 32-bit comparator greater for signal <o_color$cmp_gt0002> created at line 51.
-    Found 32-bit comparator greater for signal <o_color$cmp_gt0003> created at line 51.
-    Found 32-bit comparator greater for signal <o_color$cmp_gt0004> created at line 51.
-    Found 32-bit comparator greater for signal <o_color$cmp_gt0005> created at line 51.
-    Found 32-bit comparator less for signal <o_color$cmp_lt0000> created at line 51.
-    Found 32-bit comparator less for signal <o_color$cmp_lt0001> created at line 51.
-    Found 32-bit comparator less for signal <o_color$cmp_lt0002> created at line 51.
-    Found 32-bit comparator less for signal <o_color$cmp_lt0003> created at line 51.
-    Found 32-bit comparator less for signal <o_color$cmp_lt0004> created at line 51.
-    Found 32-bit comparator less for signal <o_color$cmp_lt0005> created at line 51.
-    Found 32-bit comparator greater for signal <right_start_y$cmp_lt0000> created at line 129.
-    Found 32-bit 4-to-1 multiplexer for signal <right_start_y$mux0002> created at line 141.
-    Found 32-bit addsub for signal <right_start_y$share0000> created at line 141.
+    Found 32-bit adder for signal <mid_start_y$addsub0000> created at line 73.
+    Found 32-bit adder for signal <o_color$add0000> created at line 53.
+    Found 32-bit adder for signal <o_color$add0001> created at line 53.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0000> created at line 60.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0001> created at line 60.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0002> created at line 53.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0003> created at line 53.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0004> created at line 53.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0005> created at line 53.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0006> created at line 53.
+    Found 32-bit comparator greater for signal <o_color$cmp_gt0007> created at line 53.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0000> created at line 60.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0001> created at line 60.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0002> created at line 53.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0003> created at line 53.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0004> created at line 53.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0005> created at line 53.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0006> created at line 53.
+    Found 32-bit comparator less for signal <o_color$cmp_lt0007> created at line 53.
+    Found 32-bit comparator greater for signal <right_start_y$cmp_lt0000> created at line 140.
+    Found 32-bit 4-to-1 multiplexer for signal <right_start_y$mux0002> created at line 153.
+    Found 32-bit addsub for signal <right_start_y$share0000> created at line 153.
     Found 32-bit register for signal <v_x>.
-    Found 32-bit comparator greater for signal <v_x$cmp_gt0000> created at line 71.
-    Found 32-bit comparator greater for signal <v_x$cmp_gt0001> created at line 71.
-    Found 32-bit comparator greater for signal <v_x$cmp_gt0002> created at line 76.
-    Found 32-bit comparator less for signal <v_x$cmp_lt0000> created at line 71.
-    Found 32-bit comparator less for signal <v_x$cmp_lt0001> created at line 76.
-    Found 32-bit comparator less for signal <v_x$cmp_lt0002> created at line 76.
-    Found 32-bit adder for signal <v_x$sub0000> created at line 74.
+    Found 32-bit adder for signal <v_x$add0000> created at line 118.
+    Found 32-bit adder for signal <v_x$addsub0000> created at line 101.
+    Found 32-bit comparator greater for signal <v_x$cmp_gt0000> created at line 76.
+    Found 32-bit comparator greater for signal <v_x$cmp_gt0001> created at line 76.
+    Found 32-bit comparator greater for signal <v_x$cmp_gt0002> created at line 81.
+    Found 32-bit comparator greater for signal <v_x$cmp_gt0003> created at line 101.
+    Found 32-bit comparator less for signal <v_x$cmp_lt0000> created at line 76.
+    Found 32-bit comparator less for signal <v_x$cmp_lt0001> created at line 81.
+    Found 32-bit comparator less for signal <v_x$cmp_lt0002> created at line 81.
+    Found 32-bit comparator less for signal <v_x$cmp_lt0003> created at line 118.
+    Found 32-bit 8-to-1 multiplexer for signal <v_x$mux0002>.
+    Found 32-bit subtractor for signal <v_x$sub0001> created at line 101.
     Found 32-bit register for signal <v_y>.
+    Found 32-bit 8-to-1 multiplexer for signal <v_y$mux0002>.
     Summary:
 	inferred 192 D-type flip-flop(s).
-	inferred  10 Adder/Subtractor(s).
-	inferred  21 Comparator(s).
-	inferred  64 Multiplexer(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred  27 Comparator(s).
+	inferred 128 Multiplexer(s).
 Unit <CG> synthesized.
 
 
@@ -452,21 +466,24 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 20
- 32-bit adder                                          : 16
+# Adders/Subtractors                                   : 24
+ 32-bit adder                                          : 18
  32-bit addsub                                         : 4
+ 32-bit subtractor                                     : 2
 # Counters                                             : 4
  32-bit up counter                                     : 4
 # Registers                                            : 20
  1-bit register                                        : 4
  32-bit register                                       : 16
-# Latches                                              : 4
+# Latches                                              : 6
+ 1-bit latch                                           : 2
  32-bit latch                                          : 4
-# Comparators                                          : 46
- 32-bit comparator greater                             : 22
- 32-bit comparator less                                : 24
-# Multiplexers                                         : 4
+# Comparators                                          : 58
+ 32-bit comparator greater                             : 28
+ 32-bit comparator less                                : 30
+# Multiplexers                                         : 8
  32-bit 4-to-1 multiplexer                             : 4
+ 32-bit 8-to-1 multiplexer                             : 4
 
 =========================================================================
 
@@ -474,41 +491,48 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block a_0.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block a_0.
+   You should achieve better results by setting this init to 1.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 20
- 32-bit adder                                          : 16
+# Adders/Subtractors                                   : 24
+ 32-bit adder                                          : 18
  32-bit addsub                                         : 4
+ 32-bit subtractor                                     : 2
 # Counters                                             : 4
  32-bit up counter                                     : 4
 # Registers                                            : 516
  Flip-Flops                                            : 516
-# Latches                                              : 4
+# Latches                                              : 6
+ 1-bit latch                                           : 2
  32-bit latch                                          : 4
-# Comparators                                          : 46
- 32-bit comparator greater                             : 22
- 32-bit comparator less                                : 24
-# Multiplexers                                         : 4
+# Comparators                                          : 58
+ 32-bit comparator greater                             : 28
+ 32-bit comparator less                                : 30
+# Multiplexers                                         : 8
  32-bit 4-to-1 multiplexer                             : 4
+ 32-bit 8-to-1 multiplexer                             : 4
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <Inst_myVGA1/Inst_CG/v_y_0> has a constant value of 1 in block <manage>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <Inst_myVGA1/Inst_CG/v_x_0> has a constant value of 1 in block <manage>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <Inst_myVGA2/Inst_CG/v_y_0> has a constant value of 1 in block <manage>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <Inst_myVGA2/Inst_CG/v_x_0> has a constant value of 1 in block <manage>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <Inst_myVGA1/Inst_CG/v_y_1> in Unit <manage> is equivalent to the following 29 FFs/Latches, which will be removed : <Inst_myVGA1/Inst_CG/v_y_3> <Inst_myVGA1/Inst_CG/v_y_4> <Inst_myVGA1/Inst_CG/v_y_5> <Inst_myVGA1/Inst_CG/v_y_6> <Inst_myVGA1/Inst_CG/v_y_7> <Inst_myVGA1/Inst_CG/v_y_8> <Inst_myVGA1/Inst_CG/v_y_9> <Inst_myVGA1/Inst_CG/v_y_10> <Inst_myVGA1/Inst_CG/v_y_11> <Inst_myVGA1/Inst_CG/v_y_12> <Inst_myVGA1/Inst_CG/v_y_13> <Inst_myVGA1/Inst_CG/v_y_14> <Inst_myVGA1/Inst_CG/v_y_15> <Inst_myVGA1/Inst_CG/v_y_16> <Inst_myVGA1/Inst_CG/v_y_17> <Inst_myVGA1/Inst_CG/v_y_18> <Inst_myVGA1/Inst_CG/v_y_19> <Inst_myVGA1/Inst_CG/v_y_20> <Inst_myVGA1/Inst_CG/v_y_21> <Inst_myVGA1/Inst_CG/v_y_22> <Inst_myVGA1/Inst_CG/v_y_23> <Inst_myVGA1/Inst_CG/v_y_24> <Inst_myVGA1/Inst_CG/v_y_25> <Inst_myVGA1/Inst_CG/v_y_26> <Inst_myVGA1/Inst_CG/v_y_27> <Inst_myVGA1/Inst_CG/v_y_28> <Inst_myVGA1/Inst_CG/v_y_29> <Inst_myVGA1/Inst_CG/v_y_30> <Inst_myVGA1/Inst_CG/v_y_31> 
-INFO:Xst:2261 - The FF/Latch <Inst_myVGA2/Inst_CG/v_y_1> in Unit <manage> is equivalent to the following 29 FFs/Latches, which will be removed : <Inst_myVGA2/Inst_CG/v_y_3> <Inst_myVGA2/Inst_CG/v_y_4> <Inst_myVGA2/Inst_CG/v_y_5> <Inst_myVGA2/Inst_CG/v_y_6> <Inst_myVGA2/Inst_CG/v_y_7> <Inst_myVGA2/Inst_CG/v_y_8> <Inst_myVGA2/Inst_CG/v_y_9> <Inst_myVGA2/Inst_CG/v_y_10> <Inst_myVGA2/Inst_CG/v_y_11> <Inst_myVGA2/Inst_CG/v_y_12> <Inst_myVGA2/Inst_CG/v_y_13> <Inst_myVGA2/Inst_CG/v_y_14> <Inst_myVGA2/Inst_CG/v_y_15> <Inst_myVGA2/Inst_CG/v_y_16> <Inst_myVGA2/Inst_CG/v_y_17> <Inst_myVGA2/Inst_CG/v_y_18> <Inst_myVGA2/Inst_CG/v_y_19> <Inst_myVGA2/Inst_CG/v_y_20> <Inst_myVGA2/Inst_CG/v_y_21> <Inst_myVGA2/Inst_CG/v_y_22> <Inst_myVGA2/Inst_CG/v_y_23> <Inst_myVGA2/Inst_CG/v_y_24> <Inst_myVGA2/Inst_CG/v_y_25> <Inst_myVGA2/Inst_CG/v_y_26> <Inst_myVGA2/Inst_CG/v_y_27> <Inst_myVGA2/Inst_CG/v_y_28> <Inst_myVGA2/Inst_CG/v_y_29> <Inst_myVGA2/Inst_CG/v_y_30> <Inst_myVGA2/Inst_CG/v_y_31> 
-INFO:Xst:2261 - The FF/Latch <Inst_myVGA2/Inst_CG/v_x_1> in Unit <manage> is equivalent to the following 29 FFs/Latches, which will be removed : <Inst_myVGA2/Inst_CG/v_x_3> <Inst_myVGA2/Inst_CG/v_x_4> <Inst_myVGA2/Inst_CG/v_x_5> <Inst_myVGA2/Inst_CG/v_x_6> <Inst_myVGA2/Inst_CG/v_x_7> <Inst_myVGA2/Inst_CG/v_x_8> <Inst_myVGA2/Inst_CG/v_x_9> <Inst_myVGA2/Inst_CG/v_x_10> <Inst_myVGA2/Inst_CG/v_x_11> <Inst_myVGA2/Inst_CG/v_x_12> <Inst_myVGA2/Inst_CG/v_x_13> <Inst_myVGA2/Inst_CG/v_x_14> <Inst_myVGA2/Inst_CG/v_x_15> <Inst_myVGA2/Inst_CG/v_x_16> <Inst_myVGA2/Inst_CG/v_x_17> <Inst_myVGA2/Inst_CG/v_x_18> <Inst_myVGA2/Inst_CG/v_x_19> <Inst_myVGA2/Inst_CG/v_x_20> <Inst_myVGA2/Inst_CG/v_x_21> <Inst_myVGA2/Inst_CG/v_x_22> <Inst_myVGA2/Inst_CG/v_x_23> <Inst_myVGA2/Inst_CG/v_x_24> <Inst_myVGA2/Inst_CG/v_x_25> <Inst_myVGA2/Inst_CG/v_x_26> <Inst_myVGA2/Inst_CG/v_x_27> <Inst_myVGA2/Inst_CG/v_x_28> <Inst_myVGA2/Inst_CG/v_x_29> <Inst_myVGA2/Inst_CG/v_x_30> <Inst_myVGA2/Inst_CG/v_x_31> 
-INFO:Xst:2261 - The FF/Latch <Inst_myVGA1/Inst_CG/v_x_1> in Unit <manage> is equivalent to the following 29 FFs/Latches, which will be removed : <Inst_myVGA1/Inst_CG/v_x_3> <Inst_myVGA1/Inst_CG/v_x_4> <Inst_myVGA1/Inst_CG/v_x_5> <Inst_myVGA1/Inst_CG/v_x_6> <Inst_myVGA1/Inst_CG/v_x_7> <Inst_myVGA1/Inst_CG/v_x_8> <Inst_myVGA1/Inst_CG/v_x_9> <Inst_myVGA1/Inst_CG/v_x_10> <Inst_myVGA1/Inst_CG/v_x_11> <Inst_myVGA1/Inst_CG/v_x_12> <Inst_myVGA1/Inst_CG/v_x_13> <Inst_myVGA1/Inst_CG/v_x_14> <Inst_myVGA1/Inst_CG/v_x_15> <Inst_myVGA1/Inst_CG/v_x_16> <Inst_myVGA1/Inst_CG/v_x_17> <Inst_myVGA1/Inst_CG/v_x_18> <Inst_myVGA1/Inst_CG/v_x_19> <Inst_myVGA1/Inst_CG/v_x_20> <Inst_myVGA1/Inst_CG/v_x_21> <Inst_myVGA1/Inst_CG/v_x_22> <Inst_myVGA1/Inst_CG/v_x_23> <Inst_myVGA1/Inst_CG/v_x_24> <Inst_myVGA1/Inst_CG/v_x_25> <Inst_myVGA1/Inst_CG/v_x_26> <Inst_myVGA1/Inst_CG/v_x_27> <Inst_myVGA1/Inst_CG/v_x_28> <Inst_myVGA1/Inst_CG/v_x_29> <Inst_myVGA1/Inst_CG/v_x_30> <Inst_myVGA1/Inst_CG/v_x_31> 
-WARNING:Xst:2170 - Unit manage : the following signal(s) form a combinatorial loop: Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_lut<0>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<7>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<6>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<5>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<4>, Inst_myVGA2/Inst_CG/cntr<2>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<8>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<2>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<0>, Inst_myVGA2/Inst_CG/right_start_y_cmp_lt0000, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<3>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<1>.
-WARNING:Xst:2170 - Unit manage : the following signal(s) form a combinatorial loop: Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<2>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<6>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<0>, Inst_myVGA1/Inst_CG/cntr<2>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_lut<0>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<4>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<5>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<7>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<1>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<3>, Inst_myVGA1/Inst_CG/right_start_y_cmp_lt0000, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<8>.
+WARNING:Xst:1426 - The value init of the FF/Latch Inst_myVGA1/Inst_CG/a_0 hinder the constant cleaning in the block manage.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch Inst_myVGA2/Inst_CG/a_0 hinder the constant cleaning in the block manage.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <Inst_myVGA1/Inst_CG/v_x_0> has a constant value of 0 in block <manage>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Inst_myVGA1/Inst_CG/v_y_0> has a constant value of 0 in block <manage>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Inst_myVGA2/Inst_CG/v_x_0> has a constant value of 0 in block <manage>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Inst_myVGA2/Inst_CG/v_y_0> has a constant value of 0 in block <manage>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2170 - Unit manage : the following signal(s) form a combinatorial loop: Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<0>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<1>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<6>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_lut<0>, Inst_myVGA1/Inst_CG/cntr<2>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<7>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<3>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<4>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<2>, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<5>, Inst_myVGA1/Inst_CG/right_start_y_cmp_lt0000, Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<8>.
+WARNING:Xst:2170 - Unit manage : the following signal(s) form a combinatorial loop: Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<0>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<7>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<6>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_lut<0>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<1>, Inst_myVGA2/Inst_CG/cntr<2>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<8>, Inst_myVGA2/Inst_CG/right_start_y_cmp_lt0000, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<3>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<4>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<2>, Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<5>.
 
 Optimizing unit <manage> ...
 
@@ -522,7 +546,7 @@ Optimizing unit <VSG_2> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block manage, actual ratio is 31.
+Found area constraint ratio of 100 (+ 5) on block manage, actual ratio is 34.
 
 Final Macro Processing ...
 
@@ -530,8 +554,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 524
- Flip-Flops                                            : 524
+# Registers                                            : 640
+ Flip-Flops                                            : 640
 
 =========================================================================
 
@@ -560,23 +584,27 @@ Design Statistics
 # IOs                              : 20
 
 Cell Usage :
-# BELS                             : 4495
+# BELS                             : 4692
 #      GND                         : 1
-#      INV                         : 78
-#      LUT1                        : 236
-#      LUT2                        : 1321
-#      LUT3                        : 247
-#      LUT4                        : 211
+#      INV                         : 84
+#      LUT1                        : 262
+#      LUT2                        : 1345
+#      LUT3                        : 43
+#      LUT3_D                      : 4
+#      LUT4                        : 404
+#      LUT4_L                      : 2
 #      MULT_AND                    : 2
-#      MUXCY                       : 1702
+#      MUXCY                       : 1840
+#      MUXF5                       : 8
 #      VCC                         : 1
 #      XORCY                       : 696
-# FlipFlops/Latches                : 652
-#      FD                          : 342
-#      FDE                         : 8
-#      FDR                         : 132
-#      FDS                         : 42
-#      LDE                         : 128
+# FlipFlops/Latches                : 770
+#      FD                          : 128
+#      FDE                         : 124
+#      FDR                         : 338
+#      FDRS                        : 20
+#      FDS                         : 30
+#      LDE                         : 130
 # Clock Buffers                    : 7
 #      BUFG                        : 7
 # IO Buffers                       : 20
@@ -592,9 +620,9 @@ Device utilization summary:
 
 Selected Device : 3s400pq208-4 
 
- Number of Slices:                     1113  out of   3584    31%  
- Number of Slice Flip Flops:            652  out of   7168     9%  
- Number of 4 input LUTs:               2093  out of   7168    29%  
+ Number of Slices:                     1189  out of   3584    33%  
+ Number of Slice Flip Flops:            770  out of   7168    10%  
+ Number of 4 input LUTs:               2144  out of   7168    29%  
  Number of IOs:                          20
  Number of bonded IOBs:                  20  out of    141    14%  
  Number of GCLKs:                         7  out of      8    87%  
@@ -621,8 +649,9 @@ Clock Information:
 ------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
 Clock Signal                                                                                                            | Clock buffer(FF name)                      | Load  |
 ------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
-Inst_myVGA1/Inst_VSG/VS1                                                                                                | BUFG                                       | 132   |
-Inst_myVGA2/Inst_VSG/VS1                                                                                                | BUFG                                       | 132   |
+Inst_myVGA1/Inst_VSG/VS1                                                                                                | BUFG                                       | 190   |
+Inst_myVGA1/Inst_CG/a_0_cmp_eq0000(Inst_myVGA1/Inst_CG/a_0_cmp_eq00001:O)                                               | NONE(*)(Inst_myVGA1/Inst_CG/a_0)           | 2     |
+Inst_myVGA2/Inst_VSG/VS1                                                                                                | BUFG                                       | 190   |
 i_clk40                                                                                                                 | Inst_myDCM/DCM_INST:CLK0                   | 65    |
 Inst_myVGA1/Inst_HSG/HS1                                                                                                | BUFG                                       | 65    |
 i_clk40                                                                                                                 | Inst_myDCM/DCM_INST:CLKFX                  | 65    |
@@ -630,7 +659,7 @@ Inst_myVGA2/Inst_HSG/HS1                                                        
 Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>(Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>:O)| NONE(*)(Inst_myVGA2/Inst_CG/left_start_y_0)| 64    |
 Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>(Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>:O)| NONE(*)(Inst_myVGA1/Inst_CG/left_start_y_0)| 64    |
 ------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
-(*) These 2 clock signal(s) are generated by combinatorial logic,
+(*) These 3 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -644,7 +673,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 15.797ns (Maximum Frequency: 63.302MHz)
-   Minimum input arrival time before clock: 8.949ns
+   Minimum input arrival time before clock: 8.953ns
    Maximum output required time after clock: 19.264ns
    Maximum combinational path delay: 9.396ns
 
@@ -654,20 +683,20 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_myVGA1/Inst_VSG/VS1'
-  Clock period: 9.996ns (frequency: 100.040MHz)
-  Total number of paths / destination ports: 14968 / 157
+  Clock period: 11.417ns (frequency: 87.589MHz)
+  Total number of paths / destination ports: 48694 / 390
 -------------------------------------------------------------------------
-Delay:               9.996ns (Levels of Logic = 35)
+Delay:               11.417ns (Levels of Logic = 37)
   Source:            Inst_myVGA1/Inst_CG/mid_end_y_0 (FF)
-  Destination:       Inst_myVGA1/Inst_CG/v_x_1 (FF)
+  Destination:       Inst_myVGA1/Inst_CG/v_x_2 (FF)
   Source Clock:      Inst_myVGA1/Inst_VSG/VS1 rising
   Destination Clock: Inst_myVGA1/Inst_VSG/VS1 rising
 
-  Data Path: Inst_myVGA1/Inst_CG/mid_end_y_0 to Inst_myVGA1/Inst_CG/v_x_1
+  Data Path: Inst_myVGA1/Inst_CG/mid_end_y_0 to Inst_myVGA1/Inst_CG/v_x_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.720   1.260  Inst_myVGA1/Inst_CG/mid_end_y_0 (Inst_myVGA1/Inst_CG/mid_end_y_0)
+     FDR:C->Q              5   0.720   1.260  Inst_myVGA1/Inst_CG/mid_end_y_0 (Inst_myVGA1/Inst_CG/mid_end_y_0)
      LUT2:I0->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_lut<0> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_lut<0>)
      MUXCY:S->O            1   0.500   0.000  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<0> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<0>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<1> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<1>)
@@ -700,30 +729,32 @@ Delay:               9.996ns (Levels of Logic = 35)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<28> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<28>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<29> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<29>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<30> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<30>)
-     MUXCY:CI->O           2   0.303   0.945  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31>)
-     LUT3:I2->O            2   0.551   1.216  Inst_myVGA1/Inst_CG/v_x_and00001 (Inst_myVGA1/Inst_CG/v_x_and0000)
-     LUT4:I0->O            2   0.551   0.877  Inst_myVGA1/Inst_CG/v_x_not00021 (Inst_myVGA1/Inst_CG/v_x_not0002)
-     FDE:CE                    0.602          Inst_myVGA1/Inst_CG/v_x_1
+     MUXCY:CI->O           2   0.303   0.903  Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31>)
+     LUT4:I3->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/v_x_mux0003221 (Inst_myVGA1/Inst_CG/v_x_mux0003221)
+     MUXF5:I1->O           1   0.360   0.869  Inst_myVGA1/Inst_CG/v_x_mux000322_f5 (Inst_myVGA1/Inst_CG/v_x_mux000322)
+     LUT3_D:I2->O         29   0.551   2.175  Inst_myVGA1/Inst_CG/v_x_mux000327 (Inst_myVGA1/Inst_CG/v_x_mux0003)
+     LUT4:I0->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mmux_v_x_mux0002611 (Inst_myVGA1/Inst_CG/v_x_mux0002<9>)
+     FDE:D                     0.203          Inst_myVGA1/Inst_CG/v_x_9
     ----------------------------------------
-    Total                      9.996ns (5.698ns logic, 4.298ns route)
-                                       (57.0% logic, 43.0% route)
+    Total                     11.417ns (6.210ns logic, 5.207ns route)
+                                       (54.4% logic, 45.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Inst_myVGA2/Inst_VSG/VS1'
-  Clock period: 9.996ns (frequency: 100.040MHz)
-  Total number of paths / destination ports: 14968 / 157
+  Clock period: 11.417ns (frequency: 87.589MHz)
+  Total number of paths / destination ports: 48694 / 390
 -------------------------------------------------------------------------
-Delay:               9.996ns (Levels of Logic = 35)
+Delay:               11.417ns (Levels of Logic = 37)
   Source:            Inst_myVGA2/Inst_CG/mid_end_y_0 (FF)
-  Destination:       Inst_myVGA2/Inst_CG/v_x_1 (FF)
+  Destination:       Inst_myVGA2/Inst_CG/v_x_2 (FF)
   Source Clock:      Inst_myVGA2/Inst_VSG/VS1 rising
   Destination Clock: Inst_myVGA2/Inst_VSG/VS1 rising
 
-  Data Path: Inst_myVGA2/Inst_CG/mid_end_y_0 to Inst_myVGA2/Inst_CG/v_x_1
+  Data Path: Inst_myVGA2/Inst_CG/mid_end_y_0 to Inst_myVGA2/Inst_CG/v_x_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.720   1.260  Inst_myVGA2/Inst_CG/mid_end_y_0 (Inst_myVGA2/Inst_CG/mid_end_y_0)
+     FDR:C->Q              5   0.720   1.260  Inst_myVGA2/Inst_CG/mid_end_y_0 (Inst_myVGA2/Inst_CG/mid_end_y_0)
      LUT2:I0->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_lut<0> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_lut<0>)
      MUXCY:S->O            1   0.500   0.000  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<0> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<0>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<1> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<1>)
@@ -756,13 +787,15 @@ Delay:               9.996ns (Levels of Logic = 35)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<28> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<28>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<29> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<29>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<30> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<30>)
-     MUXCY:CI->O           2   0.303   0.945  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31>)
-     LUT3:I2->O            2   0.551   1.216  Inst_myVGA2/Inst_CG/v_x_and00001 (Inst_myVGA2/Inst_CG/v_x_and0000)
-     LUT4:I0->O            2   0.551   0.877  Inst_myVGA2/Inst_CG/v_x_not00021 (Inst_myVGA2/Inst_CG/v_x_not0002)
-     FDE:CE                    0.602          Inst_myVGA2/Inst_CG/v_x_1
+     MUXCY:CI->O           2   0.303   0.903  Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31> (Inst_myVGA2/Inst_CG/Mcompar_v_x_cmp_lt0002_cy<31>)
+     LUT4:I3->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/v_x_mux0003221 (Inst_myVGA2/Inst_CG/v_x_mux0003221)
+     MUXF5:I1->O           1   0.360   0.869  Inst_myVGA2/Inst_CG/v_x_mux000322_f5 (Inst_myVGA2/Inst_CG/v_x_mux000322)
+     LUT3_D:I2->O         29   0.551   2.175  Inst_myVGA2/Inst_CG/v_x_mux000327 (Inst_myVGA2/Inst_CG/v_x_mux0003)
+     LUT4:I0->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mmux_v_x_mux0002611 (Inst_myVGA2/Inst_CG/v_x_mux0002<9>)
+     FDE:D                     0.203          Inst_myVGA2/Inst_CG/v_x_9
     ----------------------------------------
-    Total                      9.996ns (5.698ns logic, 4.298ns route)
-                                       (57.0% logic, 43.0% route)
+    Total                     11.417ns (6.210ns logic, 5.207ns route)
+                                       (54.4% logic, 45.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'i_clk40'
@@ -973,16 +1006,16 @@ Delay:               5.971ns (Levels of Logic = 33)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>'
   Total number of paths / destination ports: 4736 / 128
 -------------------------------------------------------------------------
-Offset:              8.949ns (Levels of Logic = 35)
-  Source:            PushButton4<0> (PAD)
+Offset:              8.953ns (Levels of Logic = 35)
+  Source:            PushButton<0> (PAD)
   Destination:       Inst_myVGA2/Inst_CG/left_start_y_31 (LATCH)
   Destination Clock: Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9> rising
 
-  Data Path: PushButton4<0> to Inst_myVGA2/Inst_CG/left_start_y_31
+  Data Path: PushButton<0> to Inst_myVGA2/Inst_CG/left_start_y_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   0.821   1.256  PushButton4_0_IBUF (PushButton4_0_IBUF)
+     IBUF:I->O             5   0.821   1.260  PushButton_0_IBUF (PushButton_0_IBUF)
      LUT4:I0->O           66   0.551   2.243  Inst_myVGA1/Inst_CG/left_start_y_cmp_eq00003 (Inst_myVGA1/Inst_CG/left_start_y_cmp_eq0000)
      LUT2:I1->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Maddsub_left_start_y_share0000_lut<0> (Inst_myVGA2/Inst_CG/Maddsub_left_start_y_share0000_lut<0>)
      MUXCY:S->O            1   0.500   0.000  Inst_myVGA2/Inst_CG/Maddsub_left_start_y_share0000_cy<0> (Inst_myVGA2/Inst_CG/Maddsub_left_start_y_share0000_cy<0>)
@@ -1019,23 +1052,23 @@ Offset:              8.949ns (Levels of Logic = 35)
      XORCY:CI->O           1   0.904   0.000  Inst_myVGA2/Inst_CG/Maddsub_left_start_y_share0000_xor<31> (Inst_myVGA2/Inst_CG/left_start_y_share0000<31>)
      LDE:D                     0.203          Inst_myVGA2/Inst_CG/left_start_y_31
     ----------------------------------------
-    Total                      8.949ns (5.450ns logic, 3.499ns route)
+    Total                      8.953ns (5.450ns logic, 3.503ns route)
                                        (60.9% logic, 39.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>'
   Total number of paths / destination ports: 4736 / 128
 -------------------------------------------------------------------------
-Offset:              8.949ns (Levels of Logic = 35)
-  Source:            PushButton4<0> (PAD)
+Offset:              8.953ns (Levels of Logic = 35)
+  Source:            PushButton<0> (PAD)
   Destination:       Inst_myVGA1/Inst_CG/left_start_y_31 (LATCH)
   Destination Clock: Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9> rising
 
-  Data Path: PushButton4<0> to Inst_myVGA1/Inst_CG/left_start_y_31
+  Data Path: PushButton<0> to Inst_myVGA1/Inst_CG/left_start_y_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   0.821   1.256  PushButton4_0_IBUF (PushButton4_0_IBUF)
+     IBUF:I->O             5   0.821   1.260  PushButton_0_IBUF (PushButton_0_IBUF)
      LUT4:I0->O           66   0.551   2.243  Inst_myVGA1/Inst_CG/left_start_y_cmp_eq00003 (Inst_myVGA1/Inst_CG/left_start_y_cmp_eq0000)
      LUT2:I1->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Maddsub_left_start_y_share0000_lut<0> (Inst_myVGA1/Inst_CG/Maddsub_left_start_y_share0000_lut<0>)
      MUXCY:S->O            1   0.500   0.000  Inst_myVGA1/Inst_CG/Maddsub_left_start_y_share0000_cy<0> (Inst_myVGA1/Inst_CG/Maddsub_left_start_y_share0000_cy<0>)
@@ -1072,69 +1105,49 @@ Offset:              8.949ns (Levels of Logic = 35)
      XORCY:CI->O           1   0.904   0.000  Inst_myVGA1/Inst_CG/Maddsub_left_start_y_share0000_xor<31> (Inst_myVGA1/Inst_CG/left_start_y_share0000<31>)
      LDE:D                     0.203          Inst_myVGA1/Inst_CG/left_start_y_31
     ----------------------------------------
-    Total                      8.949ns (5.450ns logic, 3.499ns route)
+    Total                      8.953ns (5.450ns logic, 3.503ns route)
                                        (60.9% logic, 39.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'i_clk40'
-  Total number of paths / destination ports: 4362 / 11
+  Total number of paths / destination ports: 5702 / 11
 -------------------------------------------------------------------------
-Offset:              16.644ns (Levels of Logic = 37)
-  Source:            Inst_myVGA1/Inst_HSG/XC_0 (FF)
+Offset:              17.353ns (Levels of Logic = 17)
+  Source:            Inst_myVGA2/Inst_HSG/XC_3 (FF)
   Destination:       o_color<9> (PAD)
-  Source Clock:      i_clk40 rising
+  Source Clock:      i_clk40 rising 2.3X
 
-  Data Path: Inst_myVGA1/Inst_HSG/XC_0 to o_color<9>
+  Data Path: Inst_myVGA2/Inst_HSG/XC_3 to o_color<9>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               4   0.720   1.112  Inst_myVGA1/Inst_HSG/XC_0 (Inst_myVGA1/Inst_HSG/XC_0)
-     LUT2:I1->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_lut<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<11> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<11>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<12> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<12>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<13> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<13>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<14> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<14>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<15> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<15>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<16> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<16>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<17> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<17>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<18> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<18>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<19> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<19>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<20> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<20>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<21> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<21>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<22> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<22>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<23> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<23>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<24> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<24>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<25> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<25>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<26> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<26>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<27> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<27>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<28> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<28>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<29> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<29>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<30> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<30>)
-     MUXCY:CI->O           1   0.303   1.140  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<31>)
-     LUT4:I0->O            1   0.551   1.140  o_color<1>57 (o_color<1>57)
-     LUT4:I0->O            1   0.551   0.827  o_color<1>73 (o_color<1>73)
-     LUT4:I3->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     FD:C->Q               8   0.720   1.422  Inst_myVGA2/Inst_HSG/XC_3 (Inst_myVGA2/Inst_HSG/XC_3)
+     LUT1:I0->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1>_rt (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.303   1.140  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10>)
+     LUT4:I0->O            1   0.551   0.000  o_color<1>20_SW01 (o_color<1>20_SW0)
+     MUXF5:I0->O           1   0.360   0.801  o_color<1>20_SW0_f5 (N109)
+     MUXF5:S->O            1   0.621   0.996  o_color<1>20_f5 (o_color<1>20)
+     LUT4:I1->O            1   0.551   0.996  o_color<1>149_SW0 (N97)
+     LUT4:I1->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
-    Total                     16.644ns (11.291ns logic, 5.353ns route)
-                                       (67.8% logic, 32.2% route)
+    Total                     17.353ns (10.864ns logic, 6.489ns route)
+                                       (62.6% logic, 37.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_myVGA2/Inst_HSG/HS1'
-  Total number of paths / destination ports: 2881 / 11
+  Total number of paths / destination ports: 3511 / 11
 -------------------------------------------------------------------------
-Offset:              16.755ns (Levels of Logic = 37)
+Offset:              17.087ns (Levels of Logic = 18)
   Source:            Inst_myVGA2/Inst_VSG/YC_0 (FF)
   Destination:       o_color<9> (PAD)
   Source Clock:      Inst_myVGA2/Inst_HSG/HS1 rising
@@ -1143,53 +1156,34 @@ Offset:              16.755ns (Levels of Logic = 37)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               6   0.720   1.198  Inst_myVGA2/Inst_VSG/YC_0 (Inst_myVGA2/Inst_VSG/YC_0)
-     LUT2:I1->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_lut<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<1> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<2> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<3> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<4> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<4>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<5> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<5>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<6> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<6>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<7> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<7>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<8> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<8>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<9> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<9>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<10> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<11> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<11>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<12> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<12>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<13> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<13>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<14> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<14>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<15> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<15>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<16> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<16>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<17> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<17>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<18> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<18>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<19> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<19>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<20> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<20>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<21> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<21>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<22> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<22>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<23> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<23>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<24> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<24>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<25> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<25>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<26> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<26>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<27> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<27>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<28> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<28>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<29> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<29>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<30> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<30>)
-     MUXCY:CI->O           1   0.303   0.996  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<31> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0003_cy<31>)
-     LUT4:I1->O            1   0.551   1.140  o_color<1>99_SW0_SW0 (N21)
-     LUT4:I0->O            1   0.551   0.996  o_color<1>99_SW0 (N02)
-     LUT4:I1->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     FD:C->Q               7   0.720   1.405  Inst_myVGA2/Inst_VSG/YC_0 (Inst_myVGA2/Inst_VSG/YC_0)
+     LUT3:I0->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_lut<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<1> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<2> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<3> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<4> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<5> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<6> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<7> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<8> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<9> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<9>)
+     MUXCY:CI->O           1   0.303   0.827  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<10> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<10>)
+     LUT4:I3->O            1   0.551   0.000  o_color<1>20_SW01 (o_color<1>20_SW0)
+     MUXF5:I0->O           1   0.360   0.801  o_color<1>20_SW0_f5 (N109)
+     MUXF5:S->O            1   0.621   0.996  o_color<1>20_f5 (o_color<1>20)
+     LUT4:I1->O            1   0.551   0.996  o_color<1>149_SW0 (N97)
+     LUT4:I1->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
-    Total                     16.755ns (11.291ns logic, 5.464ns route)
-                                       (67.4% logic, 32.6% route)
+    Total                     17.087ns (10.928ns logic, 6.159ns route)
+                                       (64.0% logic, 36.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_myVGA1/Inst_HSG/HS1'
-  Total number of paths / destination ports: 2881 / 11
+  Total number of paths / destination ports: 3511 / 11
 -------------------------------------------------------------------------
-Offset:              16.586ns (Levels of Logic = 37)
+Offset:              17.062ns (Levels of Logic = 18)
   Source:            Inst_myVGA1/Inst_VSG/YC_0 (FF)
   Destination:       o_color<9> (PAD)
   Source Clock:      Inst_myVGA1/Inst_HSG/HS1 rising
@@ -1198,8 +1192,8 @@ Offset:              16.586ns (Levels of Logic = 37)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               6   0.720   1.198  Inst_myVGA1/Inst_VSG/YC_0 (Inst_myVGA1/Inst_VSG/YC_0)
-     LUT2:I1->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_lut<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_lut<0>)
+     FD:C->Q               7   0.720   1.405  Inst_myVGA1/Inst_VSG/YC_0 (Inst_myVGA1/Inst_VSG/YC_0)
+     LUT3:I0->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_lut<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_lut<0>)
      MUXCY:S->O            1   0.500   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<0>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<1> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<1>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<2> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<2>)
@@ -1210,35 +1204,16 @@ Offset:              16.586ns (Levels of Logic = 37)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<7> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<7>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<8> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<8>)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<9> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<9>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<10> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<11> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<11>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<12> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<12>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<13> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<13>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<14> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<14>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<15> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<15>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<16> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<16>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<17> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<17>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<18> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<18>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<19> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<19>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<20> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<20>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<21> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<21>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<22> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<22>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<23> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<23>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<24> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<24>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<25> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<25>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<26> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<26>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<27> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<27>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<28> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<28>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<29> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<29>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<30> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<30>)
-     MUXCY:CI->O           1   0.303   0.996  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<31>)
-     LUT4:I1->O            1   0.551   1.140  o_color<1>57 (o_color<1>57)
-     LUT4:I0->O            1   0.551   0.827  o_color<1>73 (o_color<1>73)
-     LUT4:I3->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     MUXCY:CI->O           1   0.303   0.827  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<10> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0001_cy<10>)
+     LUT4:I3->O            1   0.551   0.000  o_color<1>91_SW01 (o_color<1>91_SW0)
+     MUXF5:I0->O           1   0.360   0.801  o_color<1>91_SW0_f5 (N111)
+     MUXF5:S->O            1   0.621   1.140  o_color<1>91_f5 (o_color<1>91)
+     LUT4:I0->O            1   0.551   0.827  o_color<1>123 (o_color<1>123)
+     LUT4:I3->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
-    Total                     16.586ns (11.291ns logic, 5.295ns route)
-                                       (68.1% logic, 31.9% route)
+    Total                     17.062ns (10.928ns logic, 6.134ns route)
+                                       (64.0% logic, 36.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_myVGA2/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>'
@@ -1283,11 +1258,11 @@ Offset:              19.264ns (Levels of Logic = 35)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Madd_o_color_add0000_cy<29> (Inst_myVGA2/Inst_CG/Madd_o_color_add0000_cy<29>)
      MUXCY:CI->O           0   0.064   0.000  Inst_myVGA2/Inst_CG/Madd_o_color_add0000_cy<30> (Inst_myVGA2/Inst_CG/Madd_o_color_add0000_cy<30>)
      XORCY:CI->O           2   0.904   1.072  Inst_myVGA2/Inst_CG/Madd_o_color_add0000_xor<31> (Inst_myVGA2/Inst_CG/o_color_add0000<31>)
-     LUT2:I1->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0003_lut<31> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0003_lut<31>)
-     MUXCY:S->O            1   0.739   0.827  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0003_cy<31> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0003_cy<31>)
-     LUT4:I3->O            1   0.551   1.140  o_color<1>99_SW0_SW0 (N21)
-     LUT4:I0->O            1   0.551   0.996  o_color<1>99_SW0 (N02)
-     LUT4:I1->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     LUT2:I1->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0005_lut<31> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0005_lut<31>)
+     MUXCY:S->O            1   0.739   0.827  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0005_cy<31> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_lt0005_cy<31>)
+     LUT4:I3->O            1   0.551   1.140  o_color<1>49 (o_color<1>49)
+     LUT4:I0->O            1   0.551   0.996  o_color<1>149_SW0 (N97)
+     LUT4:I1->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
     Total                     19.264ns (12.839ns logic, 6.425ns route)
@@ -1297,7 +1272,7 @@ Offset:              19.264ns (Levels of Logic = 35)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_myVGA2/Inst_VSG/VS1'
   Total number of paths / destination ports: 1920 / 10
 -------------------------------------------------------------------------
-Offset:              16.634ns (Levels of Logic = 37)
+Offset:              17.163ns (Levels of Logic = 38)
   Source:            Inst_myVGA2/Inst_CG/mid_start_x_0 (FF)
   Destination:       o_color<9> (PAD)
   Source Clock:      Inst_myVGA2/Inst_VSG/VS1 rising
@@ -1306,53 +1281,78 @@ Offset:              16.634ns (Levels of Logic = 37)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.720   1.246  Inst_myVGA2/Inst_CG/mid_start_x_0 (Inst_myVGA2/Inst_CG/mid_start_x_0)
-     LUT2:I0->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_lut<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<11> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<11>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<12> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<12>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<13> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<13>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<14> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<14>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<15> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<15>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<16> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<16>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<17> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<17>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<18> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<18>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<19> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<19>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<20> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<20>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<21> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<21>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<22> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<22>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<23> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<23>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<24> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<24>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<25> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<25>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<26> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<26>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<27> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<27>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<28> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<28>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<29> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<29>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<30> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<30>)
-     MUXCY:CI->O           1   0.303   1.140  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<31> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<31>)
-     LUT4:I0->O            1   0.551   0.827  o_color<1>11 (o_color<1>11)
-     LUT4:I3->O            1   0.551   0.996  o_color<1>99_SW0 (N02)
-     LUT4:I1->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     FDR:C->Q              3   0.720   1.246  Inst_myVGA2/Inst_CG/mid_start_x_0 (Inst_myVGA2/Inst_CG/mid_start_x_0)
+     LUT2:I0->O            1   0.551   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_lut<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<0> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<1> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<2> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<3> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<4> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<5> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<6> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<7> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<8> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<9> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<10> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<11> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<12> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<13> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<14> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<15> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<16> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<17> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<18> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<19> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<20> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<21> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<22> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<23> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<24> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<25> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<26> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<27> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<28> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<29> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<29>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<30> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<30>)
+     MUXCY:CI->O           1   0.303   1.140  Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<31> (Inst_myVGA2/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<31>)
+     LUT4:I0->O            1   0.551   0.000  o_color<1>201 (o_color<1>201)
+     MUXF5:I0->O           1   0.360   0.996  o_color<1>20_f5 (o_color<1>20)
+     LUT4:I1->O            1   0.551   0.996  o_color<1>149_SW0 (N97)
+     LUT4:I1->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
-    Total                     16.634ns (11.291ns logic, 5.343ns route)
+    Total                     17.163ns (11.651ns logic, 5.512ns route)
                                        (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_myVGA1/Inst_CG/a_0_cmp_eq0000'
+  Total number of paths / destination ports: 20 / 10
+-------------------------------------------------------------------------
+Offset:              13.707ns (Levels of Logic = 6)
+  Source:            Inst_myVGA2/Inst_CG/a_0 (LATCH)
+  Destination:       o_color<9> (PAD)
+  Source Clock:      Inst_myVGA1/Inst_CG/a_0_cmp_eq0000 falling
+
+  Data Path: Inst_myVGA2/Inst_CG/a_0 to o_color<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  Inst_myVGA2/Inst_CG/a_0 (Inst_myVGA2/Inst_CG/a_0)
+     LUT4:I2->O            1   0.551   0.000  o_color<1>20_SW01 (o_color<1>20_SW0)
+     MUXF5:I0->O           1   0.360   0.801  o_color<1>20_SW0_f5 (N109)
+     MUXF5:S->O            1   0.621   0.996  o_color<1>20_f5 (o_color<1>20)
+     LUT4:I1->O            1   0.551   0.996  o_color<1>149_SW0 (N97)
+     LUT4:I1->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
+     OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
+    ----------------------------------------
+    Total                     13.707ns (8.911ns logic, 4.796ns route)
+                                       (65.0% logic, 35.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_myVGA1/Inst_VSG/VS1'
   Total number of paths / destination ports: 1920 / 10
 -------------------------------------------------------------------------
-Offset:              16.778ns (Levels of Logic = 37)
+Offset:              17.138ns (Levels of Logic = 38)
   Source:            Inst_myVGA1/Inst_CG/mid_start_x_0 (FF)
   Destination:       o_color<9> (PAD)
   Source Clock:      Inst_myVGA1/Inst_VSG/VS1 rising
@@ -1361,53 +1361,54 @@ Offset:              16.778ns (Levels of Logic = 37)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.720   1.246  Inst_myVGA1/Inst_CG/mid_start_x_0 (Inst_myVGA1/Inst_CG/mid_start_x_0)
-     LUT2:I0->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_lut<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<4>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<5>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<6>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<7>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<8>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<9>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<11> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<11>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<12> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<12>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<13> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<13>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<14> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<14>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<15> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<15>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<16> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<16>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<17> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<17>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<18> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<18>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<19> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<19>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<20> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<20>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<21> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<21>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<22> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<22>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<23> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<23>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<24> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<24>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<25> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<25>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<26> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<26>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<27> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<27>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<28> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<28>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<29> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<29>)
-     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<30> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<30>)
-     MUXCY:CI->O           1   0.303   1.140  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0000_cy<31>)
-     LUT4:I0->O            1   0.551   1.140  o_color<1>57 (o_color<1>57)
-     LUT4:I0->O            1   0.551   0.827  o_color<1>73 (o_color<1>73)
-     LUT4:I3->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     FDR:C->Q              3   0.720   1.246  Inst_myVGA1/Inst_CG/mid_start_x_0 (Inst_myVGA1/Inst_CG/mid_start_x_0)
+     LUT2:I0->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_lut<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<0> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<1> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<2> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<3> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<4> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<5> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<6> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<7> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<8> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<9> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<10> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<11> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<12> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<13> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<14> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<15> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<16> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<17> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<18> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<19> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<20> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<21> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<22> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<23> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<24> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<25> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<26> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<27> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<28> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<29> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<29>)
+     MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<30> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<30>)
+     MUXCY:CI->O           1   0.303   1.140  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_gt0002_cy<31>)
+     LUT4:I0->O            1   0.551   0.000  o_color<1>911 (o_color<1>911)
+     MUXF5:I0->O           1   0.360   1.140  o_color<1>91_f5 (o_color<1>91)
+     LUT4:I0->O            1   0.551   0.827  o_color<1>123 (o_color<1>123)
+     LUT4:I3->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
-    Total                     16.778ns (11.291ns logic, 5.487ns route)
-                                       (67.3% logic, 32.7% route)
+    Total                     17.138ns (11.651ns logic, 5.487ns route)
+                                       (68.0% logic, 32.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9>'
   Total number of paths / destination ports: 11200 / 10
 -------------------------------------------------------------------------
-Offset:              18.782ns (Levels of Logic = 35)
+Offset:              18.951ns (Levels of Logic = 35)
   Source:            Inst_myVGA1/Inst_CG/left_start_y_4 (LATCH)
   Destination:       o_color<9> (PAD)
   Source Clock:      Inst_myVGA1/Inst_CG/Mcompar_right_start_y_cmp_lt0000_cy<9> rising
@@ -1446,15 +1447,15 @@ Offset:              18.782ns (Levels of Logic = 35)
      MUXCY:CI->O           1   0.064   0.000  Inst_myVGA1/Inst_CG/Madd_o_color_add0000_cy<29> (Inst_myVGA1/Inst_CG/Madd_o_color_add0000_cy<29>)
      MUXCY:CI->O           0   0.064   0.000  Inst_myVGA1/Inst_CG/Madd_o_color_add0000_cy<30> (Inst_myVGA1/Inst_CG/Madd_o_color_add0000_cy<30>)
      XORCY:CI->O           2   0.904   1.072  Inst_myVGA1/Inst_CG/Madd_o_color_add0000_xor<31> (Inst_myVGA1/Inst_CG/o_color_add0000<31>)
-     LUT2:I1->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0003_lut<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0003_lut<31>)
-     MUXCY:S->O            1   0.739   0.827  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0003_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0003_cy<31>)
-     LUT4:I3->O            1   0.551   0.827  o_color<1>70 (o_color<1>70)
-     LUT4:I3->O            1   0.551   0.827  o_color<1>73 (o_color<1>73)
-     LUT4:I3->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     LUT2:I1->O            1   0.551   0.000  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0005_lut<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0005_lut<31>)
+     MUXCY:S->O            1   0.739   0.827  Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0005_cy<31> (Inst_myVGA1/Inst_CG/Mcompar_o_color_cmp_lt0005_cy<31>)
+     LUT4:I3->O            1   0.551   0.996  o_color<1>120 (o_color<1>120)
+     LUT4:I1->O            1   0.551   0.827  o_color<1>123 (o_color<1>123)
+     LUT4:I3->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
-    Total                     18.782ns (12.839ns logic, 5.943ns route)
-                                       (68.4% logic, 31.6% route)
+    Total                     18.951ns (12.839ns logic, 6.112ns route)
+                                       (67.7% logic, 32.3% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -1469,7 +1470,7 @@ Delay:               9.396ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   0.821   1.246  Dipswitch2_0_IBUF (Dipswitch2_0_IBUF)
-     LUT4:I0->O           10   0.551   1.134  o_color<1>99 (o_color_1_OBUF)
+     LUT4:I0->O           10   0.551   1.134  o_color<1>149 (o_color_1_OBUF)
      OBUF:I->O                 5.644          o_color_9_OBUF (o_color<9>)
     ----------------------------------------
     Total                      9.396ns (7.016ns logic, 2.380ns route)
@@ -1479,13 +1480,13 @@ Delay:               9.396ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 40.00 secs
-Total CPU time to Xst completion: 39.92 secs
+Total CPU time to Xst completion: 40.45 secs
  
 --> 
 
-Total memory usage is 408196 kilobytes
+Total memory usage is 392044 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

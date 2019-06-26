@@ -6,7 +6,7 @@ entity manage is
 		i_clk40 : 				in STD_LOGIC;
 		rst :		 				in STD_LOGIC;
 		Dipswitch2 : 		in STD_LOGIC_vector(1 downto 0);
-		PushButton4: 	in STD_LOGIC_vector(3 downto 0);
+		PushButton: 	in STD_LOGIC_vector(3 downto 0);
 		HS: 						out STD_LOGIC;
 		VS: 						out STD_LOGIC;
 		o_color : 				out STD_LOGIC_VECTOR(9 downto 0)
@@ -54,10 +54,8 @@ signal clk75 : STD_LOGIC;
 signal clk20 : STD_LOGIC;
 signal hs1 , vs1 , hs2 , vs2 : std_logic :='0' ;
 signal color1 ,color2 : std_logic_vector(9 downto 0 ); 
-signal s_PushButton : std_logic_vector(3 downto 0):="0000"; 
 begin
 --/++++++++++++++++++++++++++++++++++++++++ DCM_instance ++++++++++++++++++++++++++++++++++/
-	s_PushButton <= PushButton4;
 	
 Inst_myDCM: myDCM 
 		PORT MAP(
@@ -88,7 +86,7 @@ Inst_myVGA1 : VGA1
 		HS 				=> 	hs1,
 		VS				=> 	vs1,
 		o_color 	=> 	color1,
-		PushButton  => s_PushButton
+		PushButton  => PushButton
 	);
 	
 --/++++++++++++++++++++++++++++++++++++++++ VGA_2_instance ++++++++++++++++++++++++++++++++++/
@@ -109,7 +107,7 @@ Inst_myVGA2 : VGA1
 		HS				=> 	hs2,
 		VS				=> 	vs2,
 		o_color 	=>		color2,
-		PushButton  => s_PushButton
+		PushButton  => PushButton
 
 	);
 	

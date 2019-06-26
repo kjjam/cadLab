@@ -82,7 +82,7 @@ end component ;
 		YC: IN integer;
 		o_color : out std_logic_vector(9 downto 0);
 		clk1per60 : in std_logic;
-		PushButton1: in  std_logic_vector(3 downto 0)
+		PushButton: in  std_logic_vector(3 downto 0)
 	);
 	end component;
 	
@@ -150,7 +150,7 @@ Inst_CG : CG
 		YC => v2c,
 		o_color => o_color,
 		clk1per60 => vs1,
-		PushButton1 => PushButton
+		PushButton => PushButton
 
 	);
 	

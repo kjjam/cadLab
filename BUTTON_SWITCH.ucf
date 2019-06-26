@@ -1,5 +1,5 @@
-NET "PushButton4[0]" LOC = P190;
-NET "PushButton4[1]" LOC = P189;
-NET "PushButton4[2]" LOC = P187;
-NET "PushButton4[3]" LOC = P185;
- NET "PushButton4<0>" CLOCK_DEDICATED_ROUTE = FALSE; 
+NET "PushButton[0]" LOC = P190;
+NET "PushButton[1]" LOC = P189;
+NET "PushButton[2]" LOC = P187;
+NET "PushButton[3]" LOC = P185;
+ NET "PushButton<0>" CLOCK_DEDICATED_ROUTE = FALSE; 
